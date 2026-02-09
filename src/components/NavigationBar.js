@@ -12,7 +12,7 @@ function NavigationBar(){
                 <li className='our_impact'><Link to="/">Our Impact (Bill Gallery)</Link></li>
                 <li className='events'><Link to="/">Events</Link></li>
                 <li className='resources'><Link to="/">Resources</Link></li>
-                <li className='contact'><Link to="/">Contact</Link></li>
+                <li className='contact'><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
         </header>
