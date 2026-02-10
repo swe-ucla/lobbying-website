@@ -1,5 +1,4 @@
 import './App.css';
-import Home from './Home';
 import Contact from './Contact';
 import Home from './Home.js';
 import Events from './Events.js';
