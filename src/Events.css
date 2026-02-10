@@ -1,0 +1,71 @@
+.events-background {
+    background-color: #f8f1ff;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.events-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.events-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Calendar */
+.calendar-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.calendar-embed {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+/* Past Events */
+.past-events-title {
+    margin-bottom: 20px;
+}
+
+.past-events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-card {
+    display: flex;
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.event-card-image {
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.event-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-card-title {
+    margin: 0 0 10px 0;
+}
+
+.event-card-description {
+    margin: 0;
+    line-height: 1.5;
+}
