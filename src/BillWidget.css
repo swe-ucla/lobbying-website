@@ -1,0 +1,113 @@
+.bill-widget {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 20px 14px;
+  width: 300px;
+  box-shadow: 0 2px 12px rgba(100, 80, 180, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Text */
+.bill-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.bill-number {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3e1964;
+  letter-spacing: 0.02em;
+}
+
+.bill-title {
+  font-size: 25px;
+  font-weight: 800;
+  color: #3e1964;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.bill-date {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3e1964;
+}
+
+/* Category Circles */
+.bill-categories {
+  display: flex;
+  gap: 8px;
+}
+
+.category-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #8c52ff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+
+/* Progress bar */
+.bill-progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bill-progress {
+  display: flex;
+  gap: 0;
+  height: 24px;
+}
+
+.progress-step {
+  flex: 1;
+  height: 100%;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%);
+  margin-right: 2px;
+}
+
+.progress-step.first {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+}
+
+.progress-step.last {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%, 8px 50%);
+  margin-right: 0;
+}
+
+.progress-step.filled {
+  background: #7ed957;
+}
+
+.progress-step.empty {
+  background: #d1dae3;
+}
+
+
+/* Labels */
+.bill-progress-labels {
+  display: flex;
+}
+
+.step-label {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3a1b60;
+  margin-right: 5px;
+}
+
+.step-label.active-label {
+  color: #3e1964;
+}
