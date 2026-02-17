@@ -19,26 +19,7 @@ function Home() {
                 </div>
 
 
-                <div className="search_box">
-                    <h1 className="search_title">Policy Area</h1>
-
-                    <div className="search_elements">
-                        <div className="search-wrapper">
-                            <div className="search-icon">
-                                <img src="/assets/magnifying_glass.png" alt="magnifying glass"/>
-                            </div>
-                            <input
-                                type="text"
-                                placeholder=""
-                                className="search-input"
-                            />
-                        </div>
-
-                        <button className="category-button">Category</button>
-                    </div>
-                </div>
-
-
+                
 
                 <div className="bill_section">
                     <h2 className="bill_section_heading">Recent Lobbying Efforts & Bill Status</h2>
