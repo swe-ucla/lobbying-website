@@ -48,20 +48,23 @@ function About() {
 
           <div className="members-grid">
             {[
-              "Priya Soneji",
-              "Medha Prasad",
-              "Priya Soneji",
-              "Medha Prasad",
-              "Diya Desai",
-              "Diya Desai",
-              "Diya Desai",
-              "Diya Desai",
-              "Diya Desai",
-              "Diya Desai",
-            ].map((name, index) => (
+              { name: "Priya Soneji", role: "Director" },
+              { name: "Medha Prasad", role: "Assistant Director" },
+              { name: "Priya Soneji", role: "Cross-Campus Coalition Lead" },
+              { name: "Medha Prasad", role: "Cross-Campus Coalition Lead" },
+              { name: "Diya Desai", role: "Campus Events" },
+              { name: "Diya Desai", role: "Campus Events" },
+              { name: "Diya Desai", role: "Finance Chair" },
+              { name: "Diya Desai", role: "Finance Chair" },
+              { name: "Diya Desai", role: "Trip Planning Committee Lead" },
+              { name: "Diya Desai", role: "Trip Planning Committee Lead" },
+              { name: "Diya Desai", role: "General Member" },
+              { name: "Diya Desai", role: "General Member" },
+            ].map((member, index) => (
               <div key={index} className="member-card">
                 <div className="member-photo-placeholder" />
-                <p className="member-name">{name}</p>
+                <p className="member-name">{member.name}</p>
+                <p className="member-role">{member.role}</p>
               </div>
             ))}
           </div>
