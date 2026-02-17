@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css';
 import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
+import BillWidget from './BillWidget';
 
 
 function Home() {
@@ -44,6 +45,7 @@ function Home() {
                     <h2 className="bill_section_heading">Recent Lobbying Efforts & Bill Status</h2>
 
                     <div className="image_grid">
+                        <BillWidget number="H.R. 1234" title="STEM Education Act" date="02/03/26" categories={["STEM", "Education"]} status="Committee"></BillWidget>
                         <div className="grid_item"><img src="/assets/bill_status.png" alt="Image 1"/></div>
                         <div className="grid_item"><img src="/assets/bill_status.png" alt="Image 2"/></div>
                         <div className="grid_item"><img src="/assets/bill_status.png" alt="Image 3"/></div>
