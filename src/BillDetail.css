@@ -1,0 +1,178 @@
+.bill-detail-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+}
+
+/* Title */
+.bill-detail-title {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Author / Status Info Box */
+.bill-info-box {
+    background-color: #d8c8f0;
+    border-radius: 20px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bill-info-box p {
+    margin: 2px 0;
+}
+
+/* Background + Sidebar Row */
+.bill-content-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.bill-background-section {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.bill-background-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+/* Section Headings */
+.bill-section-heading {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* Sidebar — bill status image */
+.bill-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.bill-sidebar-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Issue Section */
+.bill-issue-section {
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.bill-issue-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 4px;
+}
+
+.bill-issue-section li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bill-issue-section ol {
+    padding-left: 18px;
+    margin: 4px 0 8px;
+}
+
+.bill-issue-section ul {
+    list-style-type: circle;
+    padding-left: 20px;
+    margin: 2px 0;
+}
+
+/* Recommendations Section */
+.bill-recommendations-section {
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.bill-recommendations-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 4px;
+}
+
+.bill-recommendations-section li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bill-recommendations-section ol {
+    padding-left: 18px;
+    margin: 4px 0 8px;
+}
+
+.bill-recommendations-section ul {
+    list-style-type: circle;
+    padding-left: 20px;
+    margin: 2px 0;
+}
+
+/* Footer Banner */
+.bill-footer-banner {
+    background-color: #2d0f75;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.bill-footer-banner p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bill-detail-page {
+        padding: 20px 12px 0;
+    }
+
+    .bill-detail-title {
+        font-size: 22px;
+    }
+
+    .bill-info-box {
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+
+    .bill-content-row {
+        flex-direction: column;
+    }
+
+    .bill-sidebar {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .bill-section-heading {
+        font-size: 15px;
+    }
+}
