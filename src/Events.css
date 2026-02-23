@@ -23,16 +23,20 @@
     background-color: #f8f1ff;
     width: 100%;
     min-height: 100vh;
-    padding: 20px 20px 40px;
+    padding: 0 20px 40px;
+    margin-top: 0;
+    overflow: auto;
 }
 
 .events-page {
     max-width: 900px;
     margin: 0 auto;
+    padding-top: 0;
 }
 
 .events-title {
     text-align: center;
+    margin-top: 0;
     margin-bottom: 30px;
 }
 

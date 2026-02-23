@@ -2,12 +2,33 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.contact-page {
+  position: relative;
+}
+
+.contact-page .nav_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.contact-hero-image-only {
+  width: 100%;
+}
+
+.contact-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* CONTACT AND MAP */
 .contact-card {
   display: flex;
   align-items: stretch;
   max-width: 1200px;
-  margin: 2.5rem auto;
+  margin: -20px auto 0;
   width: 100%;
   background: white;
   border-radius: 18px;

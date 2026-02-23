@@ -1,7 +1,7 @@
-import './Contact.css';
-import NavigationBar from './components/NavigationBar';
+import "./Contact.css";
+import NavigationBar from "./components/NavigationBar";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 
 function Contact() {
@@ -35,8 +35,15 @@ function Contact() {
     };
     
     return (
-        <div>
+        <div className="contact-page">
             <NavigationBar />
+            <section className="contact-hero-image-only">
+                <img
+                    src="/assets/Contact Us Hero.svg"
+                    alt="Contact us hero"
+                    className="contact-hero-image"
+                />
+            </section>
             <div className="contact-card">
                 <div className="contact-container">
                     <h1>Contact Us</h1>
