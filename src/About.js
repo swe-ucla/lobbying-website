@@ -4,20 +4,16 @@ import "./About.css";
 
 function About() {
   return (
-    <div>
+    <div className="about-page">
       <NavigationBar />
 
-      <div className="about-hero">
+      <section className="about-hero-image-only">
         <img
-          src="/assets/background_image.png"
-          alt="SWE Lobbying Committee at the Capitol"
+          src="/assets/About Us Hero.svg"
+          alt="About us hero"
           className="about-hero-image"
         />
-        <div className="about-hero-overlay" />
-        <div className="about-hero-text">
-          <h1>ABOUT US</h1>
-        </div>
-      </div>
+      </section>
 
       <main className="about-content">
         <section className="about-section mission-section">
