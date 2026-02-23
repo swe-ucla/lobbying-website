@@ -1,8 +1,29 @@
+.events-page-wrapper {
+    position: relative;
+}
+
+.events-page-wrapper .nav_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.events-hero-image-only {
+    width: 100%;
+}
+
+.events-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .events-background {
     background-color: #f8f1ff;
     width: 100%;
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 20px 20px 40px;
 }
 
 .events-page {
