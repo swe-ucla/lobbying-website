@@ -1,4 +1,32 @@
 
+.bill-gallery-page {
+  position: relative;
+}
+
+.bill-gallery-page .nav_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.bill-gallery-hero-image-only {
+  width: 100%;
+  position: relative;
+}
+
+.bill-gallery-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bill-gallery-content {
+  position: relative;
+  margin-top: -260px;
+  z-index: 2;
+}
+
 .bill-gallery-title{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
