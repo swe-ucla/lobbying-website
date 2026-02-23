@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
+
 .nav_bar {
     width: 100%;
     height: 70px;
-    background-color: #5e4b71;
+    background-color: transparent;
     display: flex;
     align-items: center;
     padding: 0 20px;
+    margin-top: 18px;
     box-sizing: border-box;
 }
 
@@ -19,9 +22,9 @@
     padding: 0;
 
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
 
     width: 100%;
     height: 100%;
@@ -31,6 +34,7 @@
     display: flex;
     align-items: center;
     margin-right: auto;
+    align-self: center;
 }
 
 .nav-logo {
@@ -40,15 +44,22 @@
 }
 
 
-.nav li a {
-    color: #d2c7ff;
+.nav_link {
+    color: #f5f7ff;
     text-decoration: none;
-    font-size: 24px;
-    font-weight: 400;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Source Sans 3', sans-serif;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    margin-top: 6px;
 }
 
-
-.nav li a:hover {
+.nav_link:hover {
     color: #ffffff;
+}
+
+.nav_link.active {
+    color: #e7000b;
+    border-bottom-color: #e7000b;
 }

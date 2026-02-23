@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavigationBar.css';
 
 function NavigationBar(){
@@ -8,15 +8,35 @@ function NavigationBar(){
             <nav className='nav'>
                 <ul>
                 <li className='logo'>
-                    <Link to="/" aria-label="Home">
+                    <NavLink to="/" aria-label="Home">
                         <img src="/assets/new_lobbying_logo.svg" alt="Lobbying logo" className="nav-logo" />
-                    </Link>
+                    </NavLink>
                 </li>
-                <li className='home'><Link to="/">Home</Link></li>
-                <li className='about_us'><Link to="/about">About Us</Link></li>
-                <li className='our_impact'><Link to="/bill_gallery">Our Impact (Bill Gallery)</Link></li>
-                <li className='events'><Link to="/events">Events</Link></li>
-                <li className='contact'><Link to="/contact">Contact</Link></li>
+                <li className='home'>
+                    <NavLink to="/" end className="nav_link">
+                        Home
+                    </NavLink>
+                </li>
+                <li className='about_us'>
+                    <NavLink to="/about" className="nav_link">
+                        About Us
+                    </NavLink>
+                </li>
+                <li className='our_impact'>
+                    <NavLink to="/bill_gallery" className="nav_link">
+                        Our Impact
+                    </NavLink>
+                </li>
+                <li className='events'>
+                    <NavLink to="/events" className="nav_link">
+                        Events
+                    </NavLink>
+                </li>
+                <li className='contact'>
+                    <NavLink to="/contact" className="nav_link">
+                        Contact
+                    </NavLink>
+                </li>
                 </ul>
             </nav>
         </header>

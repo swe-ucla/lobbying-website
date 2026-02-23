@@ -1,120 +1,22 @@
-.background_section {
+.home-page {
     position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: visible;
 }
 
-
-.background_image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.background_image_overlay {
+.home-page .nav_bar {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(141, 119, 171, 0.38);
-}
-
-.background_text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 0 20px;
-    line-height: 1.4;
-}
-
-
-.search_box {
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #2d0f75;
-    border-radius: 28px;
-    padding: 16px 24px;
-    width: 55%;
-    max-width: 900px;
-    box-sizing: border-box;
     z-index: 5;
 }
 
-
-.search_title {
-    margin-top: 0;
-    color: white;
-    font-size: 32px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-    margin-bottom: 24px;
-}
-
-
-.search_elements {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-}
-
-
-.search-wrapper {
-    display: flex;
-    align-items: center;
-    background-color: #fff4cf;
-    border-radius: 20px;
-    border: 4px solid #7a5a1d;
-    height: 48px;
-    flex: 1;
-    max-width: 400px;
-}
-
-
-.search-icon {
-    background-color: #b39ddb;
-    border-radius: 16px 0 0 16px;
-    height: 100%;
-    width: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-}
-
-.search-icon img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-}
-
-.search-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 20px;
-    padding: 0 20px;
+.hero-image-only {
     width: 100%;
 }
 
-.category-button {
-    background-color: #fff4cf;
-    border: none;
-    padding: 16px 32px;
-    font-size: 28px;
-    font-family: 'Times New Roman', Times, serif;
-    cursor: pointer;
-    margin-left: 60px;
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -149,4 +51,3 @@
     height: auto;
     border-radius: 12px;
 }
-
