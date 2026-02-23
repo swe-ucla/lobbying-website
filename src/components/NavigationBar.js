@@ -7,6 +7,11 @@ function NavigationBar(){
         <header className='nav_bar'>
             <nav className='nav'>
                 <ul>
+                <li className='logo'>
+                    <Link to="/" aria-label="Home">
+                        <img src="/assets/new_lobbying_logo.svg" alt="Lobbying logo" className="nav-logo" />
+                    </Link>
+                </li>
                 <li className='home'><Link to="/">Home</Link></li>
                 <li className='about_us'><Link to="/about">About Us</Link></li>
                 <li className='our_impact'><Link to="/bill_gallery">Our Impact (Bill Gallery)</Link></li>

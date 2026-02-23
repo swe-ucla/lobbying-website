@@ -19,11 +19,24 @@
     padding: 0;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
+    gap: 24px;
 
     width: 100%;
     height: 100%;
+}
+
+.nav .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.nav-logo {
+    height: 70px;
+    width: auto;
+    display: block;
 }
 
 

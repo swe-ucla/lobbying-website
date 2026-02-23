@@ -1,5 +1,4 @@
 import './Contact.css';
-import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
 
 import React, { useState } from 'react';
@@ -37,7 +36,6 @@ function Contact() {
     
     return (
         <div>
-            <Header />
             <NavigationBar />
             <div className="contact-card">
                 <div className="contact-container">

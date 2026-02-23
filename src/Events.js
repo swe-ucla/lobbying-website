@@ -1,12 +1,10 @@
 import React from "react";
 import './Events.css';
-import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
 
 function Events() {
     return (
         <div>
-            <Header />
             <NavigationBar />
 
             <div className="events-background">

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './BillGallery.css';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import NavigationBar from './components/NavigationBar';
 import Bill from './components/Bill';
@@ -32,7 +31,6 @@ H.R. 641, the Coordination for Soil Carbon Research and Monitoring Act, addresse
     
     return (
         <div>
-            <Header />
             <NavigationBar />
 
             <h1 className="bill-gallery-title">IMPACT BILL GALLERY</h1>

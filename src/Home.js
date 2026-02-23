@@ -1,13 +1,11 @@
 import React from "react";
 import './Home.css';
-import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
 
 
 function Home() {
     return (
         <div>
-            <Header />
             <NavigationBar />
 
             <div className="background_section">

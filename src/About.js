@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
 import NavigationBar from "./components/NavigationBar";
 import "./About.css";
 
 function About() {
   return (
     <div>
-      <Header />
       <NavigationBar />
 
       <div className="about-hero">
@@ -100,4 +98,3 @@ function About() {
 }
 
 export default About;
-
