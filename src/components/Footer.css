@@ -1,0 +1,16 @@
+.footer {
+    position: relative;
+    background-color: #2c0a71;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    color: #ffffff;
+    font-style: italic;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}

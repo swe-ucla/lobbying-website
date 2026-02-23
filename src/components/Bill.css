@@ -1,0 +1,54 @@
+.bill {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.bill-info-component {
+    background-color: #ffffff;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.bill-info-image {
+    display: block;
+    width: 350px;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.bill-summary {
+    flex: 1;
+    background-color: #d2d2db;
+    padding: 16px 24px;
+    border-radius: 50px;
+}
+
+.summary-title {
+    color: #3e1964;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 5px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.summary-content {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+.summary-paragraph {
+    margin: 0 0 16px 0;
+}
+
+.summary-paragraph:last-child {
+    margin-bottom: 0;
+}
