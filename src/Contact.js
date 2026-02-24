@@ -171,9 +171,11 @@ function Contact() {
                         <p className="info-label">Follow Us</p>
                         <div className="social-icons">
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/company/swe-ucla/"
                             aria-label="LinkedIn"
                             className="social-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.3335 6.66675C14.6596 6.66675 15.9313 7.19353 16.869 8.13121C17.8067 9.0689 18.3335 10.3407 18.3335 11.6667V17.5001H15.0002V11.6667C15.0002 11.2247 14.8246 10.8008 14.512 10.4882C14.1994 10.1757 13.7755 10.0001 13.3335 10.0001C12.8915 10.0001 12.4675 10.1757 12.155 10.4882C11.8424 10.8008 11.6668 11.2247 11.6668 11.6667V17.5001H8.3335V11.6667C8.3335 10.3407 8.86028 9.0689 9.79796 8.13121C10.7356 7.19353 12.0074 6.66675 13.3335 6.66675Z" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
@@ -182,14 +184,28 @@ function Contact() {
                             </svg>
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/uclaswelobbying?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                             aria-label="Instagram"
                             className="social-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.1665 1.66675H5.83317C3.53198 1.66675 1.6665 3.53223 1.6665 5.83341V14.1667C1.6665 16.4679 3.53198 18.3334 5.83317 18.3334H14.1665C16.4677 18.3334 18.3332 16.4679 18.3332 14.1667V5.83341C18.3332 3.53223 16.4677 1.66675 14.1665 1.66675Z" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M13.3333 9.47501C13.4361 10.1685 13.3176 10.8769 12.9947 11.4992C12.6718 12.1215 12.1609 12.6262 11.5346 12.9414C10.9083 13.2566 10.1986 13.3663 9.50641 13.255C8.81419 13.1436 8.17472 12.8167 7.67895 12.321C7.18318 11.8252 6.85636 11.1857 6.74497 10.4935C6.63359 9.8013 6.74331 9.09159 7.05852 8.46532C7.37374 7.83905 7.87841 7.32812 8.50074 7.00521C9.12307 6.68229 9.83138 6.56383 10.5249 6.66667C11.2324 6.77158 11.8873 7.10123 12.393 7.60693C12.8987 8.11263 13.2283 8.76757 13.3333 9.47501Z" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M14.5835 5.41675H14.5918" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/swe.ucla/"
+                            aria-label="Facebook"
+                            className="social-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.1665 1.66675H5.83317C3.53198 1.66675 1.6665 3.53223 1.6665 5.83341V14.1667C1.6665 16.4679 3.53198 18.3334 5.83317 18.3334H14.1665C16.4677 18.3334 18.3332 16.4679 18.3332 14.1667V5.83341C18.3332 3.53223 16.4677 1.66675 14.1665 1.66675Z" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M12.5 18.3333V11.6667H14.1667L14.5833 9.16667H12.5V7.91667C12.5 7.225 12.7778 6.66667 13.8333 6.66667H14.5833V4.16667C14.1667 4.08333 13.3333 4 12.2917 4C10.4167 4 9.16667 5.29167 9.16667 7.79167V9.16667H7.5V11.6667H9.16667V18.3333H12.5Z" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                         </a>
                         </div>
