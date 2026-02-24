@@ -118,7 +118,6 @@ function Contact() {
                         </button>
                     </form>
                     </div>
-                </div>
 
                 <div className="right-column">
                     <div className="map-container">

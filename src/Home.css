@@ -1,5 +1,6 @@
 .home-page {
     position: relative;
+    background-color: #ffffff;
 }
 
 .home-page .nav_bar {
@@ -22,7 +23,7 @@
 
 
 .bill_section {
-    background-color: #f8f1ff;
+    background-color: #ffffff;
     padding: 60px 20px;
     text-align: center;
 }
