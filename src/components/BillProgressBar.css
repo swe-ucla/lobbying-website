@@ -1,0 +1,89 @@
+.progress-container {
+  padding: 16px 0;
+  width: 100%;
+}
+
+.progress-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #798799;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.progress-current {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a50f0f;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background: lightgray;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #1447e7;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progress-circles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-step-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.progress-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.progress-circle.completed {
+  background: #1447e7;
+  border: none;
+}
+
+.progress-circle.incomplete {
+  background: #ffffff;
+  border: 2px solid #9d9fa4;
+}
+
+.progress-step-label {
+  font-size: 0.64rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.progress-step-label.active-step {
+  color: #c41616;
+  font-weight: 700;
+}
+
+.progress-step-label.done-step {
+  color: #111827;
+  font-weight: 600;
+}
+
+.progress-step-label.future-step {
+  color: #798799;
+}
