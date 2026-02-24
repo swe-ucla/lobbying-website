@@ -4,6 +4,7 @@ import Home from './Home.js';
 import Events from './Events.js';
 import About from './About';
 import BillDetail from './BillDetail';
+import BillGallery from './BillGallery';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/bill_gallery" element={<BillGallery />} />
           <Route path="/bill/:id" element={<BillDetail />} />
         </Routes>
       </div>

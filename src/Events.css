@@ -1,17 +1,42 @@
+.events-page-wrapper {
+    position: relative;
+}
+
+.events-page-wrapper .nav_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.events-hero-image-only {
+    width: 100%;
+}
+
+.events-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .events-background {
     background-color: #f8f1ff;
     width: 100%;
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 0 20px 40px;
+    margin-top: 0;
+    overflow: auto;
 }
 
 .events-page {
     max-width: 900px;
     margin: 0 auto;
+    padding-top: 0;
 }
 
 .events-title {
     text-align: center;
+    margin-top: 0;
     margin-bottom: 30px;
 }
 

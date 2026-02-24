@@ -1,8 +1,7 @@
-import './Contact.css';
-import Header from './components/Header';
-import NavigationBar from './components/NavigationBar';
+import "./Contact.css";
+import NavigationBar from "./components/NavigationBar";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 
 function Contact() {
@@ -36,13 +35,17 @@ function Contact() {
     };
     
     return (
-        <div>
-            <Header />
+        <div className="contact-page">
             <NavigationBar />
-            <h1 className="contact-title">Contact Us</h1>
-            <div className="contact-page">
-                <div className="contact-card">
-                    <div className="contact-container">
+            <section className="contact-hero-image-only">
+                <img
+                    src="/assets/Contact Us Hero.svg"
+                    alt="Contact us hero"
+                    className="contact-hero-image"
+                />
+            </section>
+            <div className="contact-card">
+                <div className="contact-container">
                     <h1>Contact Us</h1>
                     <p className="subtitle">
                         Complete the form below and send your message to us.

@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import './BillDetail.css';
-import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
 import billData from './data/billData';
 
@@ -12,7 +11,6 @@ function BillDetail() {
     if (!bill) {
         return (
             <div>
-                <Header />
                 <NavigationBar />
                 <div className="bill-detail-page">
                     <h1 className="bill-detail-title">Bill not found.</h1>
@@ -23,7 +21,6 @@ function BillDetail() {
 
     return (
         <div>
-            <Header />
             <NavigationBar />
 
             <div className="bill-detail-page">

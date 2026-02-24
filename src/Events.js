@@ -1,13 +1,19 @@
 import React from "react";
-import './Events.css';
-import Header from './components/Header';
-import NavigationBar from './components/NavigationBar';
+import "./Events.css";
+import NavigationBar from "./components/NavigationBar";
 
 function Events() {
     return (
-        <div>
-            <Header />
+        <div className="events-page-wrapper">
             <NavigationBar />
+
+            <section className="events-hero-image-only">
+                <img
+                    src="/assets/Events Hero.svg"
+                    alt="Events hero"
+                    className="events-hero-image"
+                />
+            </section>
 
             <div className="events-background">
                 <div className="events-page">
