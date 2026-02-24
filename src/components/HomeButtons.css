@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home-button-row-container {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.home-button-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+.button {
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.button--blue {
+  background: linear-gradient(135deg, #2d60f5 0%, #1e4de0 40%, #1a3ac1 100%);
+  box-shadow: 0 8px 24px rgba(20, 40, 160, 0.3);
+}
+
+.button--red {
+  background: linear-gradient(135deg, #d42020 0%, #c41616 40%, #a50f0f 100%);
+  box-shadow: 0 8px 24px rgba(180, 20, 20, 0.3);
+}
+
+.button--blue:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 24px 48px rgba(20, 40, 160, 0.5);
+}
+
+.button--red:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 24px 48px rgba(180, 20, 20, 0.5);
+}
+
+.button-shine {
+  position: absolute;
+  top: -60%;
+  right: -30%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  flex-shrink: 0;
+}
+
+.document-icon-img {
+    width: 45px;
+    height: auto;
+}
+
+.button-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.button-desc {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.65;
+  flex: 1;
+  text-align: left;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 26px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: gap 0.2s ease;
+}
+
+.button-link:hover {
+  gap: 12px;
+}
+
+.button-link svg {
+  transition: transform 0.2s ease;
+}
+
+.button-link:hover svg {
+  transform: translateX(3px);
+}
