@@ -23,74 +23,97 @@
     background-color: #ffffff;
     width: 100%;
     min-height: 100vh;
-    padding: 0 20px 40px;
+    padding: 0 20px 60px;
     margin-top: 0;
     overflow: auto;
+    text-align: left;
 }
 
 .events-page {
     max-width: 900px;
     margin: 0 auto;
     padding-top: 0;
+    text-align: left;
 }
 
-.events-title {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 30px;
+/* Section Headings */
+.events-section-heading {
+    color: #101828;
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.36px;
+    margin: 48px 0 24px;
+    text-align: left;
 }
 
 /* Calendar */
 .calendar-section {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
 }
 
-.calendar-embed {
+.calendar-section iframe {
     width: 100%;
     height: 500px;
-    border: none;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
 }
 
 /* Past Events */
-.past-events-title {
-    margin-bottom: 20px;
-}
-
 .past-events-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
 }
 
 .event-card {
     display: flex;
-    gap: 20px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 20px;
+    border: 1px solid #e4e7ec;
+    border-radius: 16px;
+    overflow: hidden;
     background-color: #ffffff;
+    text-align: left;
+    align-items: stretch;
 }
 
-.event-card-image {
-    width: 180px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
+.event-card-image-wrapper {
+    width: 232px;
+    min-width: 232px;
     flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f2f4f7;
 }
 
 .event-card-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 24px;
 }
 
 .event-card-title {
-    margin: 0 0 10px 0;
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #101828;
+    margin: 0 0 4px;
+}
+
+.event-card-date {
+    font-size: 14px;
+    color: #667085;
+    margin: 0 0 12px;
 }
 
 .event-card-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #344054;
     margin: 0;
-    line-height: 1.5;
 }
