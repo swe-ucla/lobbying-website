@@ -20,16 +20,22 @@ function About() {
           <div className="about-text">
             <h2>Our Mission</h2>
             <p>
-              The Society of Women Engineers (SWE) Lobbying Committee engages
-              annually in advocacy efforts in Washington, D.C., lobbying for
-              legislation related to STEM, education, artificial intelligence,
-              the environment, and related policy areas.
+              The mission of the Society of Women Engineers (SWE) Lobbying
+              Committee is to ensure that the voices of women engineers are
+              heard and respected within the halls of Congress.
+            </p> <br />
+            <p>
+              We work tirelessly to bridge the gap between technical expertise
+              and public policy, advocating for legislation that promotes
+              diversity, equity, and innovation. By championing these values, we
+              aim to shape a legislative landscape that empowers the next
+              generation of STEM leaders.
             </p>
           </div>
           <div className="about-image-wrapper">
             <img
-              src="/assets/background_image.png"
-              alt="SWE members on the Capitol steps"
+              src="/assets/group_pic_2.jpg"
+              alt="SWE lobbying committee members in front of the Washington Monument"
               className="about-section-image"
             />
           </div>
@@ -43,17 +49,17 @@ function About() {
           <div className="members-grid">
             {[
               { name: "Priya Soneji", role: "Director" },
-              { name: "Medha Prasad", role: "Assistant Director" },
-              { name: "Priya Soneji", role: "Cross-Campus Coalition Lead" },
-              { name: "Medha Prasad", role: "Cross-Campus Coalition Lead" },
-              { name: "Diya Desai", role: "Campus Events" },
-              { name: "Diya Desai", role: "Campus Events" },
-              { name: "Diya Desai", role: "Finance Chair" },
-              { name: "Diya Desai", role: "Finance Chair" },
-              { name: "Diya Desai", role: "Trip Planning Committee Lead" },
-              { name: "Diya Desai", role: "Trip Planning Committee Lead" },
-              { name: "Diya Desai", role: "General Member" },
-              { name: "Diya Desai", role: "General Member" },
+              { name: "Savannah Alanis", role: "Assistant Director" },
+              { name: "Diya Desai", role: "Cross-Campus Coalition Lead" },
+              { name: "Issabela Medina", role: "Cross-Campus Coalition Lead" },
+              { name: "Medha Prasad", role: "Campus Events Lead" },
+              { name: "Duru Ibisagaoglu", role: "Campus Events Lead" },
+              { name: "Rachel Lee", role: "Financial Chair" },
+              { name: "Ava Soh", role: "Financial Chair" },
+              { name: "Chloe Cheng", role: "Trip Planning Lead" },
+              { name: "Annan Dai", role: "Trip Planning Lead" },
+              { name: "Nyla Zia", role: "General (Cross-Campus Advisor)" },
+              { name: "Jocelyn Barrera", role: "General (Financial Advisor)" },
             ].map((member, index) => (
               <div key={index} className="member-card">
                 <div className="member-photo-placeholder" />
@@ -65,27 +71,27 @@ function About() {
         </section>
 
         <section className="about-section history-section">
+          <div className="about-image-wrapper">
+            <img
+              src="/assets/group_pic_1.jpg"
+              alt="SWE lobbying committee members with the Washington Monument"
+              className="about-section-image"
+            />
+          </div>
           <div className="about-text">
             <h2>A History of Our Advocacy</h2>
             <p>
               The Society of Women Engineers (SWE) Lobbying Committee engages
-              annually in advocacy efforts in Washington, D.C., lobbying for
-              legislation related to STEM, education, artificial intelligence,
-              the environment, and related policy areas.
-            </p>
+              in a sustained, annual effort to influence federal policy in
+              Washington, D.C. Our advocacy has historically focused on driving
+              legislative progress in critical sectors, including STEM
+              education, artificial intelligence, and environmental protection.
+            </p>  <br />
             <p>
-              The Society of Women Engineers (SWE) Lobbying Committee engages
-              annually in advocacy efforts in Washington, D.C., lobbying for
-              legislation related to STEM, education, artificial intelligence,
-              the environment, and related policy areas.
+              Through these yearly lobbying trips, we have established a
+              consistent presence at the Capitol, fighting for policy areas that
+              directly impact the engineering community and the broader public.
             </p>
-          </div>
-          <div className="about-image-wrapper">
-            <img
-              src="/assets/background_image.png"
-              alt="SWE advocacy history"
-              className="about-section-image"
-            />
           </div>
         </section>
       </main>

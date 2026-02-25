@@ -9,10 +9,11 @@
 }
 
 .about-content {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 40px auto 60px;
   padding: 0 24px 40px;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .about-section {
@@ -20,22 +21,34 @@
 }
 
 .about-section h2 {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 32px;
+  font-family: 'Merriweather', serif;
+  font-size: 40px;
   color: #2b2140;
   margin-top: 0;
 }
 
 .about-section p {
-  font-size: 18px;
+  font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  font-size: 20px;
   line-height: 1.7;
   color: #2f263f;
 }
 
-.mission-section,
+.about-text {
+  text-align: left;
+}
+
+.mission-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.5fr);
+  gap: 40px;
+  align-items: center;
+}
+
 .history-section {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.32fr);
   gap: 40px;
   align-items: center;
 }
@@ -48,8 +61,22 @@
 .about-section-image {
   width: 100%;
   max-width: 420px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.mission-section .about-section-image {
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  object-position: center 70%;
+}
+
+.history-section .about-section-image {
+  max-width: 520px;
+  aspect-ratio: 16 / 10;
+  object-position: center 70%;
 }
 
 .about-section-title {
@@ -79,7 +106,7 @@
   margin-top: 8px;
   margin-bottom: 2px;
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Merriweather', serif;
 }
 
 .member-role {
@@ -87,6 +114,8 @@
   font-size: 14px;
   color: #5e4b71;
   font-style: italic;
+  font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
 }
 
 @media (max-width: 900px) {
