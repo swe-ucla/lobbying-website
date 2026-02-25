@@ -203,9 +203,8 @@ function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.1665 1.66675H5.83317C3.53198 1.66675 1.6665 3.53223 1.6665 5.83341V14.1667C1.6665 16.4679 3.53198 18.3334 5.83317 18.3334H14.1665C16.4677 18.3334 18.3332 16.4679 18.3332 14.1667V5.83341C18.3332 3.53223 16.4677 1.66675 14.1665 1.66675Z" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M12.5 18.3333V11.6667H14.1667L14.5833 9.16667H12.5V7.91667C12.5 7.225 12.7778 6.66667 13.8333 6.66667H14.5833V4.16667C14.1667 4.08333 13.3333 4 12.2917 4C10.4167 4 9.16667 5.29167 9.16667 7.79167V9.16667H7.5V11.6667H9.16667V18.3333H12.5Z" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.2502 2H14.3752C13.1043 2 11.8856 2.52678 10.9869 3.46447C10.0883 4.40215 9.5835 5.67392 9.5835 7V10H6.7085V14H9.5835V22H13.4168V14H16.2918L17.2502 10H13.4168V7C13.4168 6.73478 13.5178 6.48043 13.6975 6.29289C13.8772 6.10536 14.121 6 14.3752 6H17.2502V2Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
                         </div>
