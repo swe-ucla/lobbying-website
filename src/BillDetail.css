@@ -1,178 +1,205 @@
-.bill-detail-page {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 30px 20px 0;
+.bd-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Title */
-.bill-detail-title {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 20px;
+/* ── Hero ── */
+.bd-hero {
+    background: #0b3ddb;
+    color: #fff;
+    padding: 80px 48px 48px;
 }
 
-/* Author / Status Info Box */
-.bill-info-box {
-    background-color: #d8c8f0;
-    border-radius: 20px;
-    padding: 16px 24px;
+.bd-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
     margin-bottom: 24px;
-    text-align: center;
+    opacity: 0.85;
+}
+
+.bd-back-link:hover {
+    opacity: 1;
+}
+
+.bd-hero-title {
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 32px;
+    max-width: 750px;
+}
+
+.bd-hero-info {
+    display: flex;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px 32px;
+}
+
+.bd-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    padding-right: 24px;
+}
+
+.bd-info-col:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    margin-right: 24px;
+}
+
+.bd-info-label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bd-info-value {
     font-size: 14px;
     line-height: 1.5;
+    opacity: 0.9;
 }
 
-.bill-info-box p {
-    margin: 2px 0;
-}
-
-/* Background + Sidebar Row */
-.bill-content-row {
+/* ── Content Area ── */
+.bd-content {
     display: flex;
-    gap: 24px;
-    align-items: flex-start;
-    margin-bottom: 16px;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 48px 60px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.bill-background-section {
+/* ── Sidebar ── */
+.bd-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 24px;
+    align-self: flex-start;
+}
+
+.bd-sidebar .bill-widget {
+    width: 100%;
+}
+
+.bd-congress-link {
+    display: block;
+    text-align: center;
+    background-color: #e74c6f;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.bd-congress-link:hover {
+    background-color: #d1365a;
+}
+
+/* ── Main Content ── */
+.bd-main {
     flex: 1;
     min-width: 0;
+}
+
+.bd-section {
+    margin-bottom: 36px;
     text-align: left;
 }
 
-.bill-background-section p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0 0 10px;
-}
-
-/* Section Headings */
-.bill-section-heading {
-    text-align: center;
-    font-size: 16px;
+.bd-section-title {
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 0;
-    margin-bottom: 8px;
+    color: #101828;
+    margin: 0 0 16px;
 }
 
-/* Sidebar — bill status image */
-.bill-sidebar {
-    width: 260px;
-    flex-shrink: 0;
+.bd-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #344054;
+    margin: 0 0 12px;
 }
 
-.bill-sidebar-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-}
-
-/* Issue Section */
-.bill-issue-section {
-    border-top: 1px solid #ddd;
-    padding-top: 16px;
-    margin-bottom: 0;
-    text-align: left;
-}
-
-.bill-issue-section p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0 0 4px;
-}
-
-.bill-issue-section li {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.bill-issue-section ol {
-    padding-left: 18px;
-    margin: 4px 0 8px;
-}
-
-.bill-issue-section ul {
-    list-style-type: circle;
+.bd-section ol {
     padding-left: 20px;
-    margin: 2px 0;
+    margin: 8px 0 12px;
 }
 
-/* Recommendations Section */
-.bill-recommendations-section {
-    border-top: 1px solid #ddd;
-    padding-top: 16px;
-    margin-bottom: 0;
-    text-align: left;
+.bd-section ul {
+    list-style-type: disc;
+    padding-left: 22px;
+    margin: 4px 0;
 }
 
-.bill-recommendations-section p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0 0 4px;
+.bd-section li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #344054;
+    margin-bottom: 4px;
 }
 
-.bill-recommendations-section li {
-    font-size: 14px;
-    line-height: 1.5;
+.bd-section a {
+    color: #2d1b69;
+    text-decoration: underline;
 }
 
-.bill-recommendations-section ol {
-    padding-left: 18px;
-    margin: 4px 0 8px;
-}
-
-.bill-recommendations-section ul {
-    list-style-type: circle;
-    padding-left: 20px;
-    margin: 2px 0;
-}
-
-/* Footer Banner */
-.bill-footer-banner {
-    background-color: #2d0f75;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
-    margin-top: 16px;
-    width: 100%;
-}
-
-.bill-footer-banner p {
-    margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .bill-detail-page {
-        padding: 20px 12px 0;
+/* ── Responsive ── */
+@media (max-width: 820px) {
+    .bd-hero {
+        padding: 70px 24px 32px;
     }
 
-    .bill-detail-title {
-        font-size: 22px;
+    .bd-hero-title {
+        font-size: 28px;
     }
 
-    .bill-info-box {
-        padding: 14px 16px;
-        font-size: 13px;
-    }
-
-    .bill-content-row {
+    .bd-hero-info {
         flex-direction: column;
+        gap: 16px;
+        padding: 20px 24px;
     }
 
-    .bill-sidebar {
+    .bd-info-col {
+        padding-right: 0;
+    }
+
+    .bd-info-col:not(:last-child) {
+        border-right: none;
+        margin-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 12px;
+        margin-bottom: 0;
+    }
+
+    .bd-content {
+        flex-direction: column;
+        padding: 32px 24px 48px;
+    }
+
+    .bd-sidebar {
         width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .bill-section-heading {
-        font-size: 15px;
+    .bd-sidebar .bill-widget {
+        width: 100%;
     }
 }
