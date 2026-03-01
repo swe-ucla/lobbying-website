@@ -162,7 +162,7 @@ function Contact() {
                         </svg>
                         <div>
                         <p className="info-label">Phone</p>
-                            <p>(310) 555-1234</p>
+                            <p>(865) 202-8181</p>
                         </div>
                     </div>
 

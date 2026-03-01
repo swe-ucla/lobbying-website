@@ -37,7 +37,7 @@ function Footer(){
                                 stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"
                             />
                         </svg>
-                        <span>(310) 555-1234</span>
+                        <span>(865) 202-8181</span>
                     </div>
                     {/* Location */}
                     <div className="contact-item">
