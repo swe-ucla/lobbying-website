@@ -55,7 +55,8 @@ export default function BillWidget({
           <p className="bill-summary-text">{summary}</p>
           {details_url && (
             <a href={details_url} className="bill-details-link">
-              Read Full Details <span className="bill-details-arrow">→</span>
+              <span className="bill-details-link-text">Read Full Details</span>
+              <span className="bill-details-arrow">→</span>
             </a>
           )}
         </div>

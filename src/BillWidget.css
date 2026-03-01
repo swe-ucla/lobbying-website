@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
 .bill-widget {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 16px 20px 14px;
-  width: 80%;
-  box-shadow: 2px 2px 12px rgba(100, 80, 180, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  border: 1px solid #c2c5c9;
+  width: 1227;
+  height: 403;
+  border-radius: 20px;
+  border-width: 1px;
+  gap: 10px;
+  opacity: 1;
+  padding: 27px;
+  border: 1px solid #D1D5DC;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Text */
@@ -21,23 +24,33 @@
 .bill-number {
   font-size: 15px;
   font-weight: 700;
-  color: #1447e7;
+  color: #C10007;
   letter-spacing: 0.02em;
+  font-family: 'Source Sans 3', sans-serif;
+  margin-bottom: 8px;
 }
 
 .bill-title {
-  font-size: 25px;
-  font-weight: 800;
-  color: #000000;
-  margin: 0;
-  line-height: 1.25;
+  font-family: "Merriweather", "serif";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 24.75px;
+  letter-spacing: 0px;
+  color: #101828;
+  margin-bottom: 8px;
 }
 
+
 .bill-date {
-  font-size: 15px;
-  font-weight: 600;
-  color: gray;
-  margin-bottom: 10px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #4A5565;
+  margin-bottom: 16px;
 }
 
 /* Category Circles */
@@ -87,31 +100,51 @@
 }
 
 .bill-summary-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #111;
+  color: #101828;
   margin: 0 0 12px 0;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.24px;
 }
 
 .bill-summary-text {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.65;
+  color: #000000; 
   margin: 0 0 20px 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0px;
 }
 
 .bill-details-link {
-  color: #c0392b;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: underline;
+  color: #C10007;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  text-decoration-skip-ink: auto;
+
 }
 
 .bill-details-link:hover {
   opacity: 0.8;
+}
+
+.bill-details-link-text {
+  text-decoration: underline;
 }
 
 .bill-details-arrow {
