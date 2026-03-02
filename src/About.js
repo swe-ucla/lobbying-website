@@ -1,6 +1,7 @@
 import React from "react";
-import NavigationBar from "./components/NavigationBar";
 import "./About.css";
+import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
 
 function About() {
   return (
@@ -95,6 +96,7 @@ function About() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
