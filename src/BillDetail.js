@@ -33,7 +33,7 @@ function BillDetail() {
                 />
                 <div className="bill-hero-overlay">
                     <Link to="/bill_gallery" className="bill-hero-back-link">← Back to Impact Gallery</Link>
-                    <h1 className="bill-hero-title">{bill.title}</h1>
+                    <h1 className="bill-hero-title">{bill.name || bill.title || bill.billNumber}</h1>
                     <div className="bill-hero-info">
                         <div className="bill-hero-info-col">
                             <p className="bill-hero-info-label">Lead Author</p>
