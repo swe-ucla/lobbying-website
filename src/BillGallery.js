@@ -21,20 +21,25 @@ function BillGallery() {
 
             <div className="bill-gallery-content">
                 <div className="gallery-search-box">
-                        <div className="gallery-search-elements">
-                            <div className="gallery-search-wrapper">
-                                <div className="gallery-search-icon">
-                                    <img src="/assets/magnifying_glass.png" alt="magnifying glass"/>
-                                </div>
-                                <input
-                                    type="text"
-                                    placeholder=""
-                                    className="gallery-search-input"
-                                />
+                    <div className="gallery-search-elements">
+                        <div className="gallery-search-wrapper">
+                            <div className="gallery-search-icon">
+                                <img src="/assets/magnifying_glass.png" alt="magnifying glass"/>
                             </div>
-
-                            <button className="gallery-category-button">Category</button>
+                            <input
+                                type="text"
+                                placeholder="Search bills..."
+                                className="gallery-search-input"
+                            />
                         </div>
+
+                        <div className="gallery-category-select">
+                            <span>All Categories</span>
+                            <svg className="gallery-category-chevron" viewBox="0 0 24 24">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="bills-container">
