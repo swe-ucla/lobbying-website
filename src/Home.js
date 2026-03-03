@@ -5,6 +5,8 @@ import NavigationBar from './components/NavigationBar';
 import Footer from "./components/Footer";
 import BillWidget from './BillWidget';
 import HomeButtons from './components/HomeButtons';
+import { useNavigate } from 'react-router-dom';
+import { bills } from './data/ConciseBillData';
 
 const ArrowRight = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
@@ -13,6 +15,7 @@ const ArrowRight = () => (
 );
 
 function Home() {
+    const navigate = useNavigate();
     return (
         <div className="home-page">
             <NavigationBar />
@@ -36,12 +39,18 @@ function Home() {
                 </p>
 
                 <div className="image_grid">
-                    <BillWidget number="H.R. 1234" title="STEM Education Act" date="02/03/26" categories={["Education", "STEM"]} status="Committee"></BillWidget>
-                    <BillWidget number="H.R. 1234" title="STEM Education Act" date="02/03/26" categories={["Education", "STEM"]} status="Committee"></BillWidget>
-                    <BillWidget number="H.R. 1234" title="STEM Education Act" date="02/03/26" categories={["Education", "STEM"]} status="Committee"></BillWidget>
-                    <BillWidget number="H.R. 1234" title="STEM Education Act" date="02/03/26" categories={["Education", "STEM"]} status="Committee"></BillWidget>
-                    <BillWidget number="H.R. 1234" title="STEM Education Act" date="02/03/26" categories={["Education", "STEM"]} status="Committee"></BillWidget>
-                    <BillWidget number="H.R. 1234" title="STEM Education Act" date="02/03/26" categories={["Education", "STEM"]} status="Committee"></BillWidget>
+                    {bills.slice(0, 6).map((bill) => (
+                        <div key={bill.id} className="bill-link-wrapper" onClick={() => navigate(bill.details_url)}>
+                            <BillWidget
+                                number={bill.number}
+                                title={bill.title}
+                                date={bill.date}
+                                categories={bill.categories}
+                                status={bill.status}
+                            />
+                        </div>
+                    ))}
+
                 </div>
             </div>
 

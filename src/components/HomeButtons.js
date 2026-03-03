@@ -3,19 +3,21 @@ import "./HomeButtons.css";
 const home_buttons = [
   {
     id: 1,
-    title: "Priority Legislation",
-    description: "Track current bills and legislative initiatives we're actively supporting in Congress.",
-    link_name: "View All Bills",
-    link: "/bill_gallery",
-    bg: "blue",
-  },
-  {
-    id: 2,
     title: "Events & Advocacy",
     description: "Join upcoming lobbying efforts, meetings, and community events.",
     link_name: "See Events",
     link: "/events",
     bg: "red",
+    icon: "/assets/events_advocacy_icon.png",
+  },
+  {
+    id: 2,
+    title: "Priority Legislation",
+    description: "Track current bills and legislative initiatives we're actively supporting in Congress.",
+    link_name: "View All Bills",
+    link: "/bill_gallery",
+    bg: "blue",
+    icon: "/assets/document_icon.png",
   },
   {
     id: 3,
@@ -23,7 +25,8 @@ const home_buttons = [
     description: "Learn more about our mission and committee members at SWE @ UCLA.",
     link_name: "See About Us",
     link: "/about",
-    bg: "blue",
+    bg: "red",
+    icon: "/assets/about_us_icon.png",
   },
 ];
 
@@ -41,7 +44,7 @@ function HomeButtons() {
             <div key={home_button.id} className={`button button--${home_button.bg}`}>
                 <div className="button-shine" />
                 <div className="icon-wrap">
-                    <img src="/assets/document_icon.png" className="document-icon-img"/>
+                    <img src={home_button.icon} className="document-icon-img"/>
                 </div>
                 <h2 className="button-title">{home_button.title}</h2>
                 <p className="button-desc">{home_button.description}</p>

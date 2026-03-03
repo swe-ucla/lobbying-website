@@ -2,7 +2,7 @@ import React from "react";
 import "./BillGallery.css";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
-import Bill from "./components/Bill";
+import BillWidget from "./BillWidget";
 import billData from "./data/billData";
 
 function BillGallery() {
@@ -44,7 +44,22 @@ function BillGallery() {
 
                 <div className="bills-container">
                     {billData.map((bill) => (
-                        <Bill key={bill.id} bill={bill} />
+                        <BillWidget
+                            key={bill.id}
+                            number={bill.billNumber}
+                            title={bill.name}
+                            date={String(bill.year)}
+                            categories={bill.categories}
+                            status={bill.status}
+                            expanded={true}
+                            summary={
+                                bill.significance
+                                || bill.issueConclusion
+                                || (bill.background && bill.background[0])
+                                || ""
+                            }
+                            details_url={`/bill/${bill.id}`}
+                        />
                     ))}
                 </div>
             </div>

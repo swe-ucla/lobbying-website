@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import './BillDetail.css';
 import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
+import BillWidget from './BillWidget';
 import billData from './data/billData';
 
 function BillDetail() {
@@ -13,8 +14,8 @@ function BillDetail() {
         return (
             <div className="bill-detail-page-wrapper">
                 <NavigationBar />
-                <div className="bill-detail-page">
-                    <h1 className="bill-detail-title">Bill not found.</h1>
+                <div className="bd-content">
+                    <h1>Bill not found.</h1>
                 </div>
             </div>
         );
@@ -52,79 +53,119 @@ function BillDetail() {
 
             <div className="bill-detail-page">
 
-                {/* Background + Sidebar */}
-                <div className="bill-content-row">
-                    <div className="bill-background-section">
-                        <h2 className="bill-section-heading">BACKGROUND</h2>
-                        {bill.background.map((para, i) => (
-                            <p key={i}>{para}</p>
-                        ))}
-                    </div>
+            {/* Main Content */}
+            {/* <div className="bd-content"> */}
+                <aside className="bd-sidebar">
+                    <BillWidget
+                        number={bill.billNumber}
+                        title={bill.name}
+                        date={bill.year.toString()}
+                        categories={bill.categories}
+                        status="Committee"
+                    />
+                    {bill.legiscanLink && (
+                        <a
+                            href={bill.legiscanLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bd-congress-link"
+                        >
+                            View at Congress.gov
+                        </a>
+                    )}
+                </aside>
 
-                    <div className="bill-sidebar">
-                        <img
-                            src={bill.statusImage}
-                            alt="Bill Status Card"
-                            className="bill-sidebar-image"
-                        />
-                    </div>
-                </div>
+                <main className="bd-main">
+                    {/* Background */}
+                    {bill.background.length > 0 && (
+                        <section className="bd-section">
+                            <h2 className="bd-section-title">Background</h2>
+                            {bill.background.map((para, i) => (
+                                <p key={i}>{para}</p>
+                            ))}
+                        </section>
+                    )}
 
-                {/* Issue Section */}
-                {(bill.issues.length > 0 || bill.issueIntro) && (
-                    <div className="bill-issue-section">
-                        <h2 className="bill-section-heading">ISSUE</h2>
-                        {bill.issueIntro && <p>{bill.issueIntro}</p>}
-                        {bill.issues.length > 0 && (
-                            <ol>
-                                {bill.issues.map((issue, i) => (
-                                    <li key={i}>
-                                        {issue.bold ? (
-                                            <>
-                                                <strong>{issue.bold}</strong>
-                                                {issue.text.replace(issue.bold, '')}
-                                            </>
-                                        ) : (
-                                            issue.text
-                                        )}
-                                        {issue.subItems.length > 0 && (
-                                            <ul>
-                                                {issue.subItems.map((sub, j) => (
-                                                    <li key={j}>{sub}</li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </li>
-                                ))}
-                            </ol>
-                        )}
-                        {bill.issueConclusion && <p>{bill.issueConclusion}</p>}
-                    </div>
-                )}
+                    {/* Issue */}
+                    {(bill.issues.length > 0 || bill.issueIntro) && (
+                        <section className="bd-section">
+                            <h2 className="bd-section-title">Issue</h2>
+                            {bill.issueIntro && bill.issueIntro.split('\n\n').map((para, i) => (
+                                <p key={i}>{para}</p>
+                            ))}
+                            {bill.issues.length > 0 && (
+                                <ol>
+                                    {bill.issues.map((issue, i) => (
+                                        <li key={i}>
+                                            {issue.bold ? (
+                                                <>
+                                                    <strong>{issue.bold}</strong>
+                                                    {issue.text.replace(issue.bold, '')}
+                                                </>
+                                            ) : (
+                                                issue.text
+                                            )}
+                                            {issue.subItems.length > 0 && (
+                                                <ul>
+                                                    {issue.subItems.map((sub, j) => (
+                                                        <li key={j}>{sub}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ol>
+                            )}
+                            {bill.issueConclusion && <p>{bill.issueConclusion}</p>}
+                        </section>
+                    )}
 
-                {/* Recommendations Section */}
-                {(bill.recommendations.length > 0 || bill.recommendationsIntro) && (
-                    <div className="bill-recommendations-section">
-                        <h2 className="bill-section-heading">RECOMMENDATIONS</h2>
-                        {bill.recommendationsIntro && <p>{bill.recommendationsIntro}</p>}
-                        {bill.recommendations.length > 0 && (
-                            <ol>
-                                {bill.recommendations.map((rec, i) => (
-                                    <li key={i}>
-                                        {rec.text}
-                                        {rec.subItems.length > 0 && (
-                                            <ul>
-                                                {rec.subItems.map((sub, j) => (
-                                                    <li key={j}>{sub}</li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </li>
-                                ))}
-                            </ol>
-                        )}
-                    </div>
-                )}
+                    {/* Recommendations */}
+                    {(bill.recommendations.length > 0 || bill.recommendationsIntro) && (
+                        <section className="bd-section">
+                            <h2 className="bd-section-title">Recommendations</h2>
+                            {bill.recommendationsIntro && <p>{bill.recommendationsIntro}</p>}
+                            {bill.recommendations.length > 0 && (
+                                <ol>
+                                    {bill.recommendations.map((rec, i) => (
+                                        <li key={i}>
+                                            {rec.text}
+                                            {rec.subItems.length > 0 && (
+                                                <ul>
+                                                    {rec.subItems.map((sub, j) => (
+                                                        <li key={j}>{sub}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ol>
+                            )}
+                        </section>
+                    )}
+
+                    {/* Significance */}
+                    {bill.significance && (
+                        <section className="bd-section">
+                            <h2 className="bd-section-title">Significance to SWE@UCLA</h2>
+                            {bill.significance.split('\n\n').map((para, i) => (
+                                <p key={i}>{para}</p>
+                            ))}
+                        </section>
+                    )}
+
+                    {/* Contact */}
+                    {bill.contact && (
+                        <section className="bd-section">
+                            <h2 className="bd-section-title">Contact Us</h2>
+                            <p>UCLA Society of Women Engineers (SWE) Lobbying Committee</p>
+                            <p><a href={`mailto:${bill.contact.email}`}>{bill.contact.email}</a></p>
+                            {bill.contact.names.map((name, i) => (
+                                <p key={i}>{name}</p>
+                            ))}
+                        </section>
+                    )}
+                </main>
             </div>
 
             <Footer />
