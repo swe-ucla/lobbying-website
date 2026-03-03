@@ -107,3 +107,12 @@
 .more-bills-button:hover svg {
   transform: translateX(4px);
 }
+
+.bill-link-wrapper {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.bill-link-wrapper:hover {
+    transform: translateY(-4px);
+}
