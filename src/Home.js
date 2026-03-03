@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css';
 import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
+import Footer from "./components/Footer";
 import BillWidget from './BillWidget';
 import HomeButtons from './components/HomeButtons';
 import { useNavigate } from 'react-router-dom';
@@ -59,7 +60,7 @@ function Home() {
                 </button>
             </div>
 
-            
+            <Footer />
             
         </div>    
     )

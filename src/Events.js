@@ -1,6 +1,7 @@
 import React from "react";
 import "./Events.css";
 import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
 
 function Events() {
     return (
@@ -96,6 +97,7 @@ function Events() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

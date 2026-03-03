@@ -12,7 +12,7 @@ function BillDetail() {
 
     if (!bill) {
         return (
-            <div>
+            <div className="bill-detail-page-wrapper">
                 <NavigationBar />
                 <div className="bd-content">
                     <h1>Bill not found.</h1>
@@ -22,42 +22,39 @@ function BillDetail() {
     }
 
     return (
-        <div className="bd-page">
+        <div className="bill-detail-page-wrapper">
             <NavigationBar />
 
-            {/* Hero Section */}
-            <section className="bd-hero">
-                <Link to="/bill_gallery" className="bd-back-link">
-                    &larr; Back to Impact Gallery
-                </Link>
-                <h1 className="bd-hero-title">
-                    {bill.name} ({bill.billNumber})
-                </h1>
-
-                <div className="bd-hero-info">
-                    {bill.leadAuthor && (
-                        <div className="bd-info-col">
-                            <span className="bd-info-label">Lead Author</span>
-                            <span className="bd-info-value">{bill.leadAuthor}</span>
+            <section className="bill-detail-hero-image-only">
+                <img
+                    src="/assets/Bill Memo Hero.svg"
+                    alt="Bill memo hero"
+                    className="bill-detail-hero-image"
+                />
+                <div className="bill-hero-overlay">
+                    <Link to="/bill_gallery" className="bill-hero-back-link">← Back to Impact Gallery</Link>
+                    <h1 className="bill-hero-title">{bill.title}</h1>
+                    <div className="bill-hero-info">
+                        <div className="bill-hero-info-col">
+                            <p className="bill-hero-info-label">Lead Author</p>
+                            <p className="bill-hero-info-value">{bill.leadAuthor}</p>
                         </div>
-                    )}
-                    {bill.coAuthors && (
-                        <div className="bd-info-col">
-                            <span className="bd-info-label">Co-Authors</span>
-                            <span className="bd-info-value">{bill.coAuthors}</span>
+                        <div className="bill-hero-info-col">
+                            <p className="bill-hero-info-label">Co-Authors</p>
+                            <p className="bill-hero-info-value">{bill.coAuthors}</p>
                         </div>
-                    )}
-                    {bill.status && (
-                        <div className="bd-info-col">
-                            <span className="bd-info-label">Status</span>
-                            <span className="bd-info-value">{bill.status}</span>
+                        <div className="bill-hero-info-col">
+                            <p className="bill-hero-info-label">Status</p>
+                            <p className="bill-hero-info-value">{bill.status}</p>
                         </div>
-                    )}
+                    </div>
                 </div>
             </section>
 
+            <div className="bill-detail-page">
+
             {/* Main Content */}
-            <div className="bd-content">
+            {/* <div className="bd-content"> */}
                 <aside className="bd-sidebar">
                     <BillWidget
                         number={bill.billNumber}
