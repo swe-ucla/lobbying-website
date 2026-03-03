@@ -13,6 +13,7 @@
   text-transform: uppercase;
   color: #6A7282;
   text-align: left;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .progress-current {
@@ -25,6 +26,7 @@
   color: #C10007;
   text-align: left;
   margin-bottom: 18px;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .progress-track {

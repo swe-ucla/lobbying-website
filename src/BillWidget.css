@@ -2,15 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 
 .bill-widget {
-  width: 1227;
-  height: 403;
+  background: #ffffff;
   border-radius: 20px;
-  border-width: 1px;
+  border: 1px solid #D1D5DC;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 27px;
   gap: 10px;
   opacity: 1;
-  padding: 27px;
-  border: 1px solid #D1D5DC;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 /* Text */
@@ -22,7 +25,7 @@
 }
 
 .bill-number {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: #C10007;
   letter-spacing: 0.02em;
@@ -31,15 +34,14 @@
 }
 
 .bill-title {
-  font-family: "Merriweather", "serif";
+  font-family: "Merriweather", serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 18px;
   line-height: 24.75px;
   min-height: calc(24.75px * 2);
   letter-spacing: 0px;
   color: #101828;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 
 

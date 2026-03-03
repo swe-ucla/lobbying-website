@@ -23,7 +23,8 @@
 
 .bill-gallery-content {
   position: relative;
-  margin-top: -260px;
+  margin-top: -40px;
+  padding-top: 0;
   z-index: 2;
 }
 
@@ -34,12 +35,10 @@
 }
 
 .gallery-search-box {
-  margin: 0 auto 40px auto;
-  background-color: #2d0f75;
-  border-radius: 28px;
-  padding: 16px 24px;
-  width: 55%;
-  max-width: 650px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto 32px;
+  padding: 0 20px;
   box-sizing: border-box;
   z-index: 5;
 }
@@ -47,60 +46,110 @@
 .gallery-search-elements {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
+    width: 92%;
+    margin: 0 auto;
+    height: 64px;
+    background-color: #C10007;
+    border-radius: 14px;
+    padding: 0 20px;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
 }
 
 .gallery-search-wrapper {
     display: flex;
     align-items: center;
-    background-color: #fff4cf;
-    border-radius: 20px;
-    border: 4px solid #7a5a1d;
-    height: 48px;
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    height: 36px;
     flex: 1;
-    max-width: 400px;
+    padding: 0 12px;
+    gap: 8px;
 }
 
 .gallery-search-icon {
-    background-color: #b39ddb;
-    border-radius: 16px 0 0 16px;
-    height: 100%;
-    width: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    flex-shrink: 0;
 }
 
 .gallery-search-icon img {
-    width: 45px;
-    height: 45px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
 }
 
 .gallery-search-input {
     border: none;
     outline: none;
     background: transparent;
-    font-size: 20px;
-    padding: 0 20px;
+    font-size: 15px;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #ffffff;
     width: 100%;
 }
 
-.gallery-category-button {
-    background-color: #fff4cf;
-    border: none;
-    padding: 16px 32px;
-    font-size: 28px;
-    font-family: 'Times New Roman', Times, serif;
+.gallery-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.gallery-category-select {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    height: 36px;
+    padding: 0 14px;
+    gap: 8px;
     cursor: pointer;
-    margin-left: 30px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.gallery-category-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    height: 36px;
+    padding: 0 14px;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.gallery-category-select span {
+    font-size: 15px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.gallery-category-chevron {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
 .bills-container {
     max-width: 1400px;
-    margin: 20px auto 40px;
+    margin: 60px auto 40px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;

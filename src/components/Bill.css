@@ -1,65 +1,70 @@
-.bill-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.bill-link:focus-visible .bill {
-    outline: 3px solid #3e1964;
-    outline-offset: 4px;
-}
-
 .bill {
     display: flex;
     background-color: #ffffff;
-    border-radius: 50px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 24px;
+    border-radius: 20px;
+    border: 1px solid #D1D5DC;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.10);
+    margin-bottom: 16px;
+    padding: 18px;
+    gap: 10px;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    height: auto;
 }
 
 .bill-info-component {
-    background-color: #ffffff;
-    padding: 0;
-    flex-shrink: 0;
+    flex: 0 0 auto;
 }
 
-.bill-info-image {
-    display: block;
-    width: 350px;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
+.bill-info-component .bill-widget {
+    box-sizing: border-box;
+    border: none;
+    box-shadow: none;
 }
 
 .bill-summary {
     flex: 1;
-    background-color: #d2d2db;
     padding: 16px 24px;
-    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .summary-title {
-    color: #3e1964;
-    font-size: 24px;
+    color: #111827;
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
     font-weight: 800;
-    text-align: center;
-    margin: 0 0 5px 0;
-    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    margin: 0;
 }
 
 .summary-content {
-    color: #000000;
+    color: #374151;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 1.7;
-    font-family: 'Times New Roman', Times, serif;
+    line-height: 26px;
+    letter-spacing: 0px;
     text-align: left;
+    flex: 1;
 }
 
 .summary-paragraph {
-    margin: 0 0 16px 0;
+    margin: 0;
 }
 
-.summary-paragraph:last-child {
-    margin-bottom: 0;
+.read-full-details {
+    display: inline-block;
+    color: #c41616;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.read-full-details:hover {
+    text-decoration: underline;
 }
