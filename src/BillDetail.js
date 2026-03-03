@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import './BillDetail.css';
 import NavigationBar from './components/NavigationBar';
 import billData from './data/billData';
@@ -10,7 +10,7 @@ function BillDetail() {
 
     if (!bill) {
         return (
-            <div>
+            <div className="bill-detail-page-wrapper">
                 <NavigationBar />
                 <div className="bill-detail-page">
                     <h1 className="bill-detail-title">Bill not found.</h1>
@@ -20,20 +20,36 @@ function BillDetail() {
     }
 
     return (
-        <div>
+        <div className="bill-detail-page-wrapper">
             <NavigationBar />
 
-            <div className="bill-detail-page">
-                <h1 className="bill-detail-title">{bill.title}</h1>
-
-                {/* Author / Status Info Box */}
-                <div className="bill-info-box">
-                    <p><strong>Lead Author:</strong> {bill.leadAuthor}</p>
-                    <p><strong>Co-Authors:</strong> {bill.coAuthors}</p>
-                    <p>
-                        <strong>Status <em>[from latest history action, legiscan]</em>:</strong> {bill.status}
-                    </p>
+            <section className="bill-detail-hero-image-only">
+                <img
+                    src="/assets/Bill Memo Hero.svg"
+                    alt="Bill memo hero"
+                    className="bill-detail-hero-image"
+                />
+                <div className="bill-hero-overlay">
+                    <Link to="/bill_gallery" className="bill-hero-back-link">← Back to Impact Gallery</Link>
+                    <h1 className="bill-hero-title">{bill.title}</h1>
+                    <div className="bill-hero-info">
+                        <div className="bill-hero-info-col">
+                            <p className="bill-hero-info-label">Lead Author</p>
+                            <p className="bill-hero-info-value">{bill.leadAuthor}</p>
+                        </div>
+                        <div className="bill-hero-info-col">
+                            <p className="bill-hero-info-label">Co-Authors</p>
+                            <p className="bill-hero-info-value">{bill.coAuthors}</p>
+                        </div>
+                        <div className="bill-hero-info-col">
+                            <p className="bill-hero-info-label">Status</p>
+                            <p className="bill-hero-info-value">{bill.status}</p>
+                        </div>
+                    </div>
                 </div>
+            </section>
+
+            <div className="bill-detail-page">
 
                 {/* Background + Sidebar */}
                 <div className="bill-content-row">
