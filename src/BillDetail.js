@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import './BillDetail.css';
 import NavigationBar from './components/NavigationBar';
+import Footer from './components/Footer';
 import billData from './data/billData';
 
 function BillDetail() {
@@ -126,10 +127,7 @@ function BillDetail() {
                 )}
             </div>
 
-            {/* Footer Banner */}
-            <div className="bill-footer-banner">
-                <p>———— <em>To invest in engineering is to invest in our students, our future.</em> ————</p>
-            </div>
+            <Footer />
         </div>
     );
 }
