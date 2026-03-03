@@ -45,7 +45,7 @@
 
 
 .nav_link {
-    color: #f5f7ff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
@@ -60,6 +60,6 @@
 }
 
 .nav_link.active {
-    color: #e7000b;
-    border-bottom-color: #e7000b;
+    color: #ffffff;
+    border-bottom-color: #ffffff;
 }
