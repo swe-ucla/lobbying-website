@@ -60,12 +60,14 @@ export default function BillWidget({
   summary,
   details_url,
   legiscanLink,
-  expanded = false 
+  expanded = false,
+  sidebar = false
 }) {
   const currentStep = STATUSES.indexOf(status);
   const chambers = getChambers(number);
 
-    if (!expanded) {
+    // Detailed sidebar card (Bill Detail page)
+    if (sidebar) {
       return (
         <div className="bill-widget">
           <div className="bill-left">
@@ -139,8 +141,47 @@ export default function BillWidget({
       );
     }
 
+    // Expanded card with summary (Gallery page)
+    if (expanded) {
+      return (
+        <div className="bill-widget bill-widget--expanded">
+          <div className="bill-left">
+            <div className="bill-header">
+              <span className="bill-number">{number}</span>
+              <h2 className="bill-title">{title}</h2>
+              <span className="bill-date">{date}</span>
+            </div>
+
+            {categories.length > 0 && (
+              <div className="bill-categories">
+                {categories.map((cat, i) => (
+                  <div key={i} className="category-circle" title={cat}>
+                    <CategoryIcon category={cat} />
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <BillProgressBar currentStep={currentStep} />
+          </div>
+
+          <div className="bill-right">
+            <h3 className="bill-summary-title">Summary</h3>
+            <p className="bill-summary-text">{summary}</p>
+            {details_url && (
+              <a href={details_url} className="bill-details-link">
+                <span className="bill-details-link-text">Read Full Details</span>
+                <span className="bill-details-arrow">→</span>
+              </a>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    // Default simple card (Home page)
     return (
-      <div className="bill-widget bill-widget--expanded">
+      <div className="bill-widget">
         <div className="bill-left">
           <div className="bill-header">
             <span className="bill-number">{number}</span>
@@ -159,17 +200,6 @@ export default function BillWidget({
           )}
 
           <BillProgressBar currentStep={currentStep} />
-        </div>
-
-        <div className="bill-right">
-          <h3 className="bill-summary-title">Summary</h3>
-          <p className="bill-summary-text">{summary}</p>
-          {details_url && (
-            <a href={details_url} className="bill-details-link">
-              <span className="bill-details-link-text">Read Full Details</span>
-              <span className="bill-details-arrow">→</span>
-            </a>
-          )}
         </div>
       </div>
     );

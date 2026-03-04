@@ -71,6 +71,7 @@ function BillDetail() {
                         categories={bill.categories}
                         status="Committee"
                         legiscanLink={bill.legiscanLink}
+                        sidebar
                     />
                 </aside>
 
