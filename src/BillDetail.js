@@ -64,7 +64,7 @@ function BillDetail() {
                         title={bill.name}
                         date={bill.year.toString()}
                         categories={bill.categories}
-                        status="Committee"
+                        status={bill.status}
                         legiscanLink={bill.legiscanLink}
                         sidebar
                     />
@@ -151,13 +151,13 @@ function BillDetail() {
 
                     {/* Credit */}
                     {bill.contact && (
-                        <section className="bd-section">
+                        <section className="bd-section bd-credit">
                             <h2 className="bd-section-title">Credit</h2>
-                            <p>UCLA Society of Women Engineers (SWE) Lobbying Committee</p>
-                            <p><a href={`mailto:${bill.contact.email}`}>{bill.contact.email}</a></p>
-                            {bill.contact.names.map((name, i) => (
-                                <p key={i}>{name}</p>
-                            ))}
+                            <div className="bd-credit-names">
+                                {bill.contact.names.map((name, i) => (
+                                    <span key={i} className="bd-credit-chip">{name}</span>
+                                ))}
+                            </div>
                         </section>
                     )}
                 </main>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./BillWidget.css";
 import BillProgressBar from './components/BillProgressBar';
+import { CategoryIcon } from './data/categories';
 
 const STATUSES = ["Draft", "Committee", "Floor Vote", "Presented", "Passed"];
 
@@ -8,53 +9,18 @@ function mapStatusToStep(status) {
   if (!status) return 0;
   const s = status.toLowerCase();
   if (STATUSES.map(st => st.toLowerCase()).includes(s)) return STATUSES.findIndex(st => st.toLowerCase() === s);
-  if (s.includes("passed") && s.includes("referred")) return 3;
-  if (s.includes("passed")) return 4;
-  if (s.includes("presented")) return 3;
+  if (s.includes("enacted") || s.includes("signed by the president") || s.includes("became law")) return 4;
+  if (s.includes("passed") && !s.includes("referred")) return 4;
+  if (s.includes("received in the senate") || s.includes("received in the house") || s.includes("engrossed")) return 3;
+  if (s.includes("reported by") || s.includes("ordered to be reported")) return 2;
+  if (s.includes("passed") && s.includes("referred")) return 2;
   if (s.includes("floor") || s.includes("vote")) return 2;
+  if (s.includes("presented")) return 3;
   if (s.includes("referred") || s.includes("committee") || s.includes("subcommittee")) return 1;
-  if (s.includes("introduced")) return 0;
+  if (s.includes("died") && s.includes("committee")) return 1;
+  if (s.includes("introduced") || s.includes("died")) return 0;
   return 0;
 }
-
-const CategoryIcon = ({ category }) => {
-  const icons = {
-    Education: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1447e7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-        <path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5" />
-      </svg>
-    ),
-    STEM: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1447e7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 3h6v6l4 8H5l4-8V3z" />
-        <path d="M9 3h6" />
-        <circle cx="13" cy="15" r="1" fill="#1447e7" />
-        <circle cx="10" cy="13" r="0.5" fill="#1447e7" />
-      </svg>
-    ),
-    Inclusivity: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1447e7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M10 3h4v7l3 7H7l3-7V3z" />
-        <path d="M10 3h4" />
-        <circle cx="12" cy="14" r="1" fill="#1447e7" />
-      </svg>
-    ),
-    Environment: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1447e7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22c4-4 8-7.5 8-12A8 8 0 0 0 4 10c0 4.5 4 8 8 12z" />
-        <path d="M12 12c-2 0-4 1-4 3" />
-        <path d="M12 8v6" />
-      </svg>
-    ),
-    "Human Rights": (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1447e7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
-      </svg>
-    ),
-  };
-  return icons[category] || null;
-};
 
 function getChambers(billNumber) {
   if (!billNumber) return [];
