@@ -4,6 +4,19 @@ import BillProgressBar from './components/BillProgressBar';
 
 const STATUSES = ["Draft", "Committee", "Floor Vote", "Presented", "Passed"];
 
+function mapStatusToStep(status) {
+  if (!status) return 0;
+  const s = status.toLowerCase();
+  if (STATUSES.map(st => st.toLowerCase()).includes(s)) return STATUSES.findIndex(st => st.toLowerCase() === s);
+  if (s.includes("passed") && s.includes("referred")) return 3;
+  if (s.includes("passed")) return 4;
+  if (s.includes("presented")) return 3;
+  if (s.includes("floor") || s.includes("vote")) return 2;
+  if (s.includes("referred") || s.includes("committee") || s.includes("subcommittee")) return 1;
+  if (s.includes("introduced")) return 0;
+  return 0;
+}
+
 const CategoryIcon = ({ category }) => {
   const icons = {
     Education: (
@@ -63,7 +76,7 @@ export default function BillWidget({
   expanded = false,
   sidebar = false
 }) {
-  const currentStep = STATUSES.indexOf(status);
+  const currentStep = mapStatusToStep(status);
   const chambers = getChambers(number);
 
     // Detailed sidebar card (Bill Detail page)

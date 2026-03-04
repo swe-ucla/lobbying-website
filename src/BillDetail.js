@@ -23,40 +23,35 @@ function BillDetail() {
 
     return (
         <div className="bill-detail-page-wrapper">
-            <NavigationBar />
-
-            <section className="bill-detail-hero-image-only">
-                <img
-                    src="/assets/Bill Memo Hero.svg"
-                    alt="Bill memo hero"
-                    className="bill-detail-hero-image"
-                />
-                <div className="bill-hero-overlay">
-                    <Link to="/bill_gallery" className="bill-hero-back-link">&larr; Back to Impact Gallery</Link>
-                    <h1 className="bill-hero-title">{bill.name} ({bill.billNumber})</h1>
-                    {(bill.leadAuthor || bill.coAuthors || bill.status) && (
-                        <div className="bill-hero-info">
-                            {bill.leadAuthor && (
-                                <div className="bill-hero-info-col">
-                                    <p className="bill-hero-info-label">Lead Author</p>
-                                    <p className="bill-hero-info-value">{bill.leadAuthor}</p>
-                                </div>
-                            )}
-                            {bill.coAuthors && (
-                                <div className="bill-hero-info-col">
-                                    <p className="bill-hero-info-label">Co-Authors</p>
-                                    <p className="bill-hero-info-value">{bill.coAuthors}</p>
-                                </div>
-                            )}
-                            {bill.status && (
-                                <div className="bill-hero-info-col">
-                                    <p className="bill-hero-info-label">Status</p>
-                                    <p className="bill-hero-info-value">{bill.status}</p>
-                                </div>
-                            )}
-                        </div>
-                    )}
-                </div>
+            <section className="bill-hero">
+                <NavigationBar />
+                <Link to="/bill_gallery" className="bill-hero-back-link">
+                    <span className="bill-hero-back-arrow">&larr;</span>
+                    Back to Impact Gallery
+                </Link>
+                <h1 className="bill-hero-title">{bill.name} ({bill.billNumber})</h1>
+                {(bill.leadAuthor || bill.coAuthors || bill.status) && (
+                    <div className="bill-hero-info">
+                        {bill.leadAuthor && (
+                            <div className="bill-hero-info-col">
+                                <p className="bill-hero-info-label">Lead Author</p>
+                                <p className="bill-hero-info-value">{bill.leadAuthor}</p>
+                            </div>
+                        )}
+                        {bill.coAuthors && (
+                            <div className="bill-hero-info-col">
+                                <p className="bill-hero-info-label">Co-Authors</p>
+                                <p className="bill-hero-info-value">{bill.coAuthors}</p>
+                            </div>
+                        )}
+                        {bill.status && (
+                            <div className="bill-hero-info-col">
+                                <p className="bill-hero-info-label">Status</p>
+                                <p className="bill-hero-info-value">{bill.status}</p>
+                            </div>
+                        )}
+                    </div>
+                )}
             </section>
 
             <div className="bill-detail-page">

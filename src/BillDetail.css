@@ -1,105 +1,99 @@
 .bill-detail-page-wrapper {
-    position: relative;
     overflow-x: hidden;
 }
 
-.bill-detail-page-wrapper .nav_bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-}
-
-.bill-detail-hero-image-only {
-    width: 100%;
-    position: relative;
-}
-
-.bill-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+/* ── Hero ── */
+.bill-hero {
+    background: linear-gradient(to bottom, #0b2880, #1447e6);
+    color: #ffffff;
+    padding: 0 80px 60px;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 100px 80px 48px 80px;
-    text-align: left;
+    align-items: flex-start;
+    gap: 52px;
+}
+
+.bill-hero .nav_bar {
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    margin-right: -80px;
 }
 
 .bill-hero-back-link {
-    position: absolute;
-    top: 160px;
-    left: 80px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    opacity: 0.9;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .bill-hero-back-link:hover {
-    opacity: 1;
     text-decoration: underline;
+}
+
+.bill-hero-back-arrow {
+    font-size: 22px;
 }
 
 .bill-hero-title {
     font-family: 'Merriweather', serif;
     color: #ffffff;
-    font-size: 52px;
+    font-size: 64px;
     font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 32px;
-    text-align: left;
+    line-height: 75px;
+    letter-spacing: -1.2px;
+    margin: 0;
 }
 
 .bill-hero-info {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1.5fr;
-    gap: 64px;
+    display: flex;
+    gap: 91px;
     color: #ffffff;
-    margin-top: 20px;
-    position: relative;
-    top: 10%;
-    max-width: 1100px;
-    padding: 0 48px;
-    margin-left: auto;
-    margin-right: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 52px 85px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .bill-hero-info-col {
-    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.bill-hero-info-col:first-child {
+    width: 222px;
+    flex-shrink: 0;
 }
 
 .bill-hero-info-label {
+    font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
-    font-size: 14px;
-    margin: 0 0 10px;
-    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
 }
 
 .bill-hero-info-value {
-    font-size: 14px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
     margin: 0;
-    line-height: 1.6;
-    opacity: 0.9;
-    text-align: left;
-}
-
-.bill-detail-hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 .bill-detail-page {
     display: flex;
     gap: 48px;
-    max-width: 1100px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 48px 60px;
+    padding: 40px 64px 60px;
     box-sizing: border-box;
 }
 
@@ -122,8 +116,8 @@
 
 /* ── Sidebar ── */
 .bd-sidebar {
-    width: 320px;
-    min-width: 320px;
+    width: 413px;
+    min-width: 413px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -131,7 +125,6 @@
     position: sticky;
     top: 24px;
     align-self: flex-start;
-    overflow: hidden;
 }
 
 .bd-sidebar .bill-widget {
@@ -168,11 +161,11 @@
 }
 
 .bd-section-title {
-    font-family: Merriweather, 'Times New Roman', Times, serif;
-    font-size: 28px;
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
     font-weight: 700;
     color: #101828;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
 }
 
 .bd-section p {
@@ -207,19 +200,31 @@
 
 /* ── Responsive ── */
 @media (max-width: 820px) {
-    .bill-hero-overlay {
-        padding: 80px 24px 30px;
+    .bill-hero {
+        padding: 0 24px 40px;
+        gap: 32px;
+    }
+
+    .bill-hero .nav_bar {
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        margin-right: -24px;
     }
 
     .bill-hero-title {
-        font-size: 28px;
-        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.5px;
     }
 
     .bill-hero-info {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 20px;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .bill-hero-info-col:first-child {
+        width: auto;
     }
 
     .bill-detail-page {
@@ -230,6 +235,7 @@
 
     .bd-sidebar {
         width: 100%;
+        min-width: unset;
         position: static;
     }
 

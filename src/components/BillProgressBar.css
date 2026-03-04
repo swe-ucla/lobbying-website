@@ -1,45 +1,43 @@
 .progress-container {
-  padding: 16px 0;
+  padding: 0;
   width: 100%;
 }
 
 .progress-label {
-  font-family: Source Sans 3;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 600;
-  font-style: SemiBold;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: #6A7282;
   text-align: left;
-  font-family: 'Source Sans 3', sans-serif;
+  margin: 0 0 2px 0;
 }
 
 .progress-current {
-  font-family: Source Sans 3;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0px;
   color: #C10007;
   text-align: left;
-  margin-bottom: 18px;
-  font-family: 'Source Sans 3', sans-serif;
+  margin: 0 0 8px 0;
 }
 
 .progress-track {
   width: 100%;
-  height: 8px;
-  background: lightgray;
+  height: 10px;
+  background: #D1D5DC;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: #1447e7;
+  background: #1447e6;
   border-radius: 999px;
   transition: width 0.4s ease;
 }
@@ -47,6 +45,7 @@
 .progress-circles {
   display: flex;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .progress-step-col {
@@ -54,13 +53,11 @@
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  flex: 1;
-  min-width: 0;
 }
 
 .progress-circle {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -69,38 +66,32 @@
 }
 
 .progress-circle.completed {
-  background: #1447e7;
-  border: none;
+  background: #1447e6;
+  border: 2px solid #1447e6;
 }
 
 .progress-circle.incomplete {
   background: #ffffff;
-  border: 2px solid #9d9fa4;
+  border: 2px solid #99A1AF;
 }
 
 .progress-step-label {
-  font-size: 0.6rem;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 600;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
 }
 
 .progress-step-label.active-step {
   color: #C10007;
-  font-weight: 700;
-  font-family: Source Sans 3;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .progress-step-label.done-step {
   color: #1E2939;
-  font-weight: 600;
-  font-family: Source Sans 3;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .progress-step-label.future-step {
   color: #6A7282;
-  font-family: Source Sans 3;
+  font-family: 'Source Sans 3', sans-serif;
 }

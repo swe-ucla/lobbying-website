@@ -55,11 +55,10 @@
 
 
 .image_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 5px;
-    row-gap: 80px;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
     margin-bottom: 20px;
     padding: 0 60px;
 }
