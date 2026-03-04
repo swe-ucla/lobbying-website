@@ -24,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 100px 80px 48px 80px;
+    text-align: left;
 }
 
 .bill-hero-back-link {
