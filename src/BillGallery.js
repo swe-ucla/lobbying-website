@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import "./BillGallery.css";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
@@ -7,7 +7,33 @@ import billData from "./data/billData";
 
 
 function BillGallery() {
-    
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("All Categories");
+
+    const categories = useMemo(() => {
+        const set = new Set();
+        billData.forEach((bill) => {
+            (bill.categories || []).forEach((cat) => set.add(cat));
+        });
+        return Array.from(set).sort();
+    }, []);
+
+    const normalizedQuery = searchQuery.toLowerCase().trim();
+
+    const filteredBills = billData.filter((bill) => {
+        const matchesCategory =
+            selectedCategory === "All Categories" ||
+            (bill.categories || []).includes(selectedCategory);
+
+        if (!normalizedQuery) {
+            return matchesCategory;
+        }
+
+        const name = (bill.name || "").toLowerCase();
+
+        return matchesCategory && name.includes(normalizedQuery);
+    });
+
     return (
         <div className="bill-gallery-page">
             <NavigationBar />
@@ -31,32 +57,44 @@ function BillGallery() {
                                 type="text"
                                 placeholder="Search bills..."
                                 className="gallery-search-input"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                             />
                         </div>
 
-                        <div className="gallery-category-select">
-                            <span>All Categories</span>
-                            <svg className="gallery-category-chevron" viewBox="0 0 24 24">
-                                <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                        </div>
+                        <select
+                            className="gallery-category-select"
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                        >
+                            <option value="All Categories">All Categories</option>
+                            {categories.map((cat) => (
+                                <option key={cat} value={cat}>
+                                    {cat}
+                                </option>
+                            ))}
+                        </select>
                     </div>
                 </div>
 
                 <div className="bills-container">
-                    {billData.map((bill) => (
-                        <BillWidget
-                            key={bill.id}
-                            number={bill.billNumber}
-                            title={bill.name}
-                            date={String(bill.year)}
-                            categories={bill.categories}
-                            status={bill.status}
-                            expanded={true}
-                            summary={bill.significance || (bill.background && bill.background[0]) || ""}
-                            details_url={`/bill/${bill.id}`}
-                        />
-                    ))}
+                    {filteredBills.length === 0 ? (
+                        <p>No bills match your search.</p>
+                    ) : (
+                        filteredBills.map((bill) => (
+                            <BillWidget
+                                key={bill.id}
+                                number={bill.billNumber}
+                                title={bill.name}
+                                date={String(bill.year)}
+                                categories={bill.categories}
+                                status={bill.status}
+                                expanded={true}
+                                summary={bill.significance || (bill.background && bill.background[0]) || ""}
+                                details_url={`/bill/${bill.id}`}
+                            />
+                        ))
+                    )}
                 </div>
             </div>
 

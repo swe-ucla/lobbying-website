@@ -109,6 +109,7 @@
     cursor: pointer;
     white-space: nowrap;
     flex-shrink: 0;
+    color: #ffffff;
 }
 
 .gallery-category-button {
