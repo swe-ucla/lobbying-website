@@ -5,6 +5,7 @@ import NavigationBar from "./components/NavigationBar";
 import BillWidget from "./BillWidget";
 import billData from "./data/billData";
 
+
 function BillGallery() {
     
     return (
@@ -52,12 +53,7 @@ function BillGallery() {
                             categories={bill.categories}
                             status={bill.status}
                             expanded={true}
-                            summary={
-                                bill.significance
-                                || bill.issueConclusion
-                                || (bill.background && bill.background[0])
-                                || ""
-                            }
+                            summary={bill.significance || (bill.background && bill.background[0]) || ""}
                             details_url={`/bill/${bill.id}`}
                         />
                     ))}
