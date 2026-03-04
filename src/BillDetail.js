@@ -149,10 +149,10 @@ function BillDetail() {
                         </section>
                     )}
 
-                    {/* Contact */}
+                    {/* Credit */}
                     {bill.contact && (
                         <section className="bd-section">
-                            <h2 className="bd-section-title">Contact Us</h2>
+                            <h2 className="bd-section-title">Credit</h2>
                             <p>UCLA Society of Women Engineers (SWE) Lobbying Committee</p>
                             <p><a href={`mailto:${bill.contact.email}`}>{bill.contact.email}</a></p>
                             {bill.contact.names.map((name, i) => (
