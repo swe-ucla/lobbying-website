@@ -6,54 +6,87 @@
   border-radius: 20px;
   border: 1px solid #D1D5DC;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 27px;
-  gap: 10px;
+  padding: 24px;
   opacity: 1;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  text-align: left;
 }
 
-/* Text */
+/* ── Header ── */
 .bill-header {
   display: flex;
   flex-direction: column;
   gap: 2px;
   text-align: left;
+  margin-bottom: 16px;
 }
 
 .bill-number {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #C10007;
   letter-spacing: 0.02em;
   font-family: 'Source Sans 3', sans-serif;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .bill-title {
   font-family: "Merriweather", serif;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #101828;
+  margin: 0;
+}
+
+.bill-widget--expanded .bill-number {
+  font-size: 20px;
+}
+
+.bill-widget--expanded .bill-title {
   font-size: 18px;
   line-height: 24.75px;
   min-height: calc(24.75px * 2);
-  letter-spacing: 0px;
-  color: #101828;
   margin: 0 0 8px;
 }
-
 
 .bill-date {
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 500;
-  font-style: Medium;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0px;
   color: #4A5565;
   margin-bottom: 16px;
+}
+
+/* ── Meta Sections (Category, Date, Chambers) ── */
+.bill-meta-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 16px;
+  border-left: 2px dashed #e74c6f;
+  margin-bottom: 8px;
+}
+
+.bill-meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bill-meta-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #6A7282;
 }
 
 /* Category Circles */
@@ -65,22 +98,77 @@
 .category-circle {
   width: 40px;
   height: 40px;
-  background-color: #eff6ff;
+  background-color: #e8f0fe;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: default;
-  border: 2px solid #bddbff;
+  border: 2px solid #c4d8f9;
 }
 
-.category-icon {
-  height: 75%;
-  width: auto;
-  object-fit: contain;
+/* Date */
+.bill-meta-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1E2939;
 }
 
+/* Chambers */
+.bill-chambers {
+  display: flex;
+  gap: 8px;
+}
 
+.chamber-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DC;
+}
+
+.chamber-active {
+  color: #1E2939;
+  background: #f9fafb;
+}
+
+.chamber-inactive {
+  color: #9DA3AE;
+  background: #ffffff;
+  border-color: #E5E7EB;
+}
+
+/* ── Congress.gov Button ── */
+.bill-congress-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #7f1d1d;
+  color: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.bill-congress-btn:hover {
+  background-color: #991b1b;
+}
+
+/* ── Expanded Layout (Gallery/Home) ── */
 .bill-widget--expanded {
   display: flex;
   flex-direction: row;
@@ -92,6 +180,10 @@
 
 .bill-left {
   flex: 0 0 auto;
+  width: 100%;
+}
+
+.bill-widget--expanded .bill-left {
   min-width: 360px;
   max-width: 360px;
 }
@@ -107,7 +199,6 @@
   margin: 0 0 12px 0;
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 18px;
   line-height: 32px;
   letter-spacing: -0.24px;
@@ -118,7 +209,6 @@
   margin: 0 0 20px 0;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0px;
@@ -131,15 +221,9 @@
   gap: 6px;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 500;
-  font-style: Medium;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0px;
   text-decoration: none;
-  text-decoration-style: solid;
-  text-decoration-thickness: 0%;
-  text-decoration-skip-ink: auto;
-
 }
 
 .bill-details-link:hover {

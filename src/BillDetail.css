@@ -1,5 +1,6 @@
 .bill-detail-page-wrapper {
     position: relative;
+    overflow-x: hidden;
 }
 
 .bill-detail-page-wrapper .nav_bar {
@@ -93,9 +94,13 @@
 }
 
 .bill-detail-page {
-    max-width: 960px;
+    display: flex;
+    gap: 48px;
+    max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
-    padding: 30px 20px 0;
+    padding: 40px 48px 60px;
+    box-sizing: border-box;
 }
 
 /* Title */
@@ -117,7 +122,8 @@
 
 /* ── Sidebar ── */
 .bd-sidebar {
-    width: 280px;
+    width: 320px;
+    min-width: 320px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -125,10 +131,12 @@
     position: sticky;
     top: 24px;
     align-self: flex-start;
+    overflow: hidden;
 }
 
 .bd-sidebar .bill-widget {
     width: 100%;
+    box-sizing: border-box;
 }
 
 .bd-congress-link {
@@ -151,6 +159,7 @@
 .bd-main {
     flex: 1;
     min-width: 0;
+    overflow-wrap: break-word;
 }
 
 .bd-section {
@@ -198,10 +207,6 @@
 
 /* ── Responsive ── */
 @media (max-width: 820px) {
-    .bd-hero {
-        padding: 70px 24px 32px;
-    }
-
     .bill-hero-overlay {
         padding: 80px 24px 30px;
     }
@@ -217,34 +222,15 @@
         padding: 20px;
     }
 
-    .bill-content-row {
+    .bill-detail-page {
         flex-direction: column;
-        gap: 16px;
-        padding: 20px 24px;
-    }
-
-    .bd-info-col {
-        padding-right: 0;
-    }
-
-    .bd-info-col:not(:last-child) {
-        border-right: none;
-        margin-right: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 12px;
-        margin-bottom: 0;
-    }
-
-    .bd-content {
-        flex-direction: column;
-        padding: 32px 24px 48px;
+        gap: 24px;
+        padding: 24px;
     }
 
     .bd-sidebar {
         width: 100%;
         position: static;
-        flex-direction: row;
-        flex-wrap: wrap;
     }
 
     .bd-sidebar .bill-widget {

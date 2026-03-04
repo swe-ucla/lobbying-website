@@ -70,17 +70,8 @@ function BillDetail() {
                         date={bill.year.toString()}
                         categories={bill.categories}
                         status="Committee"
+                        legiscanLink={bill.legiscanLink}
                     />
-                    {bill.legiscanLink && (
-                        <a
-                            href={bill.legiscanLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bd-congress-link"
-                        >
-                            View at Congress.gov
-                        </a>
-                    )}
                 </aside>
 
                 <main className="bd-main">
