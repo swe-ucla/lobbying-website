@@ -21,6 +21,29 @@
   display: block;
 }
 
+/* Category Legend */
+.category-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+
+  margin: 50px 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.legend-text {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 18px;
+  color: #101828;
+}
+
 .bill-gallery-content {
   position: relative;
   margin-top: -40px;

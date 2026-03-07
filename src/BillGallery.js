@@ -4,6 +4,15 @@ import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
 import BillWidget from "./BillWidget";
 import billData from "./data/billData";
+import { CATEGORY_ICONS } from "./BillWidgetCategoryIcons";
+
+const legendItems = [
+  { label: "Education", key: "Education" },
+  { label: "STEM", key: "STEM" },
+  { label: "Human Rights", key: "HumanRights" },
+  { label: "Environment", key: "Environment" },
+  { label: "Inclusivity", key: "Inclusivity" }
+];
 
 function BillGallery() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -45,6 +54,7 @@ function BillGallery() {
                 />
             </section>
 
+
             <div className="bill-gallery-content">
                 <div className="gallery-search-box">
                     <div className="gallery-search-elements">
@@ -75,6 +85,24 @@ function BillGallery() {
                         </select>
                     </div>
                 </div>
+
+                <div className="category-legend">
+                {legendItems.map((item) => {
+                    const Icon = CATEGORY_ICONS[item.key];
+
+                    if (!Icon) return null;
+
+                    return (
+                    <div key={item.key} className="legend-item">
+                        <div className="category-circle">
+                        <Icon />
+                        </div>
+                        <span className="legend-text">=&nbsp;&nbsp;{item.label}</span>
+                    </div>
+                    );
+                })}
+                </div>
+
 
                 <div className="bills-container">
                     {filteredBills.length === 0 ? (
