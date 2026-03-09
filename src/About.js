@@ -49,21 +49,25 @@ function About() {
 
           <div className="members-grid">
             {[
-              { name: "Priya Soneji", role: "Director" },
-              { name: "Savannah Alanis", role: "Assistant Director" },
-              { name: "Diya Desai", role: "Cross-Campus Coalition Lead" },
-              { name: "Issabela Medina", role: "Cross-Campus Coalition Lead" },
-              { name: "Medha Prasad", role: "Campus Events Lead" },
-              { name: "Duru Ibisagaoglu", role: "Campus Events Lead" },
-              { name: "Rachel Lee", role: "Financial Chair" },
-              { name: "Ava Soh", role: "Financial Chair" },
-              { name: "Chloe Cheng", role: "Trip Planning Lead" },
-              { name: "Annan Dai", role: "Trip Planning Lead" },
-              { name: "Nyla Zia", role: "General (Cross-Campus Advisor)" },
-              { name: "Jocelyn Barrera", role: "General (Financial Advisor)" },
+              { name: "Priya Soneji", role: "Director", photo: "/assets/headshots/priya.png" },
+              { name: "Savannah Alanis", role: "Assistant Director", photo: "/assets/headshots/savannah.png" },
+              { name: "Medha Prasad", role: "Campus Events Lead", photo: "/assets/headshots/medha.png" },
+              { name: "Duru Ibisagaoglu", role: "Campus Events Lead", photo: "/assets/headshots/default.svg" },
+              { name: "Diya Desai", role: "Cross-Campus Coalition Lead", photo: "/assets/headshots/diya.png" },
+              { name: "Issabela Medina", role: "Cross-Campus Coalition Lead", photo: "/assets/headshots/issabela.png" },
+              { name: "Rachel Lee", role: "Financial Chair", photo: "/assets/headshots/rachel.png" },
+              { name: "Ava Soh", role: "Financial Chair", photo: "/assets/headshots/ava.png" },
+              { name: "Chloe Cheng", role: "Trip Planning Lead", photo: "/assets/headshots/chloe.png" },
+              { name: "Annan Dai", role: "Trip Planning Lead", photo: "/assets/headshots/annan.png" },
+              { name: "Nyla Zia", role: "General (Cross-Campus Advisor)", photo: "/assets/headshots/nyla.png" },
+              { name: "Jocelyn Barrera", role: "General (Financial Advisor)", photo: "/assets/headshots/jocelyn.png" },
             ].map((member, index) => (
               <div key={index} className="member-card">
-                <div className="member-photo-placeholder" />
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="member-photo"
+                />
                 <p className="member-name">{member.name}</p>
                 <p className="member-role">{member.role}</p>
               </div>

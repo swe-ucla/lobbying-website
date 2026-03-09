@@ -62,4 +62,5 @@
 .nav_link.active {
     color: #ffffff;
     border-bottom-color: #ffffff;
+    padding-bottom: 6px;
 }

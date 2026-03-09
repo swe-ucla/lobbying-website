@@ -3,34 +3,34 @@
 
 .bill-widget {
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 14px;
   border: 1px solid #D1D5DC;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 27px;
-  gap: 10px;
-  opacity: 1;
-  width: 100%;
-  height: auto;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 26px;
+  width: 392px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  text-align: left;
+  overflow: hidden;
 }
 
-/* Text */
+/* ── Header ── */
 .bill-header {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   text-align: left;
+  margin-bottom: 6px;
 }
 
 .bill-number {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: #C10007;
-  letter-spacing: 0.02em;
   font-family: 'Source Sans 3', sans-serif;
-  margin-bottom: 8px;
+  line-height: 24px;
 }
 
 .bill-title {
@@ -38,49 +38,197 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 24.75px;
-  min-height: calc(24.75px * 2);
   letter-spacing: 0px;
   color: #101828;
-  margin: 0 0 8px;
+  margin: 0;
+  height: calc(24.75px * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
+.bill-widget--expanded .bill-number {
+  font-size: 20px;
+}
+
+.bill-widget--expanded .bill-title {
+  font-size: 18px;
+  line-height: 24.75px;
+  height: auto;
+  min-height: calc(24.75px * 2);
+  margin: 0 0 8px;
+  overflow: visible;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+}
+
+.bill-widget--expanded .bill-header {
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bill-widget--expanded .bill-date {
+  margin-bottom: 0;
+}
+
+.bill-widget--expanded .bill-categories {
+  margin-bottom: 16px;
+}
+
+.bill-widget--expanded .category-circle {
+  width: 42px;
+  height: 42px;
+}
+
+.bill-widget--expanded .category-circle svg {
+  width: 24px;
+  height: 24px;
+}
 
 .bill-date {
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 500;
-  font-style: Medium;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0px;
   color: #4A5565;
-  margin-bottom: 16px;
+}
+
+/* ── Meta Sections (Category, Date, Chambers) ── */
+.bill-meta-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.bill-meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bill-meta-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #6A7282;
 }
 
 /* Category Circles */
 .bill-categories {
   display: flex;
   gap: 8px;
+  margin-bottom: 4px;
 }
 
 .category-circle {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background-color: #eff6ff;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: default;
-  border: 2px solid #bddbff;
+  border: 1px solid #bedbff;
 }
 
-.category-icon {
-  height: 75%;
-  width: auto;
-  object-fit: contain;
+.category-circle svg {
+  width: 18px;
+  height: 18px;
 }
 
+/* Date */
+.bill-meta-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1E2939;
+}
 
+/* Chambers */
+.bill-chambers {
+  display: flex;
+  gap: 8px;
+}
+
+.chamber-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DC;
+}
+
+.chamber-active {
+  color: #1E2939;
+  background: #f9fafb;
+}
+
+.chamber-inactive {
+  color: #9DA3AE;
+  background: #ffffff;
+  border-color: #E5E7EB;
+}
+
+/* ── Congress.gov Button ── */
+.bill-congress-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #C10007;
+  color: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.bill-congress-btn:hover {
+  background-color: #a30006;
+}
+
+/* ── Sidebar mode (Bill Detail page) ── */
+.bd-sidebar .bill-widget {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.bd-sidebar .bill-title {
+  height: auto;
+  overflow: visible;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+}
+
+.bd-sidebar .category-circle {
+  width: 42px;
+  height: 42px;
+}
+
+.bd-sidebar .category-circle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ── Expanded Layout (Gallery) ── */
 .bill-widget--expanded {
   display: flex;
   flex-direction: row;
@@ -88,10 +236,28 @@
   gap: 60px;
   width: 95%;
   margin: 0 auto;
+  height: auto;
+  overflow: visible;
 }
 
 .bill-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bill-left .progress-container {
+  margin-top: auto;
+}
+
+.bill-widget--expanded .bill-left .progress-container {
+  margin-top: 0;
+}
+
+.bill-widget--expanded .bill-left {
   flex: 0 0 auto;
+  display: block;
   min-width: 360px;
   max-width: 360px;
 }
@@ -107,7 +273,6 @@
   margin: 0 0 12px 0;
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 18px;
   line-height: 32px;
   letter-spacing: -0.24px;
@@ -118,10 +283,13 @@
   margin: 0 0 20px 0;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .bill-details-link {
@@ -131,15 +299,9 @@
   gap: 6px;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 500;
-  font-style: Medium;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0px;
   text-decoration: none;
-  text-decoration-style: solid;
-  text-decoration-thickness: 0%;
-  text-decoration-skip-ink: auto;
-
 }
 
 .bill-details-link:hover {
