@@ -14,6 +14,7 @@ const legendItems = [
   { label: "Inclusivity", key: "Inclusivity" }
 ];
 
+
 function BillGallery() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All Categories");
@@ -117,12 +118,7 @@ function BillGallery() {
                                 categories={bill.categories}
                                 status={bill.status}
                                 expanded={true}
-                                summary={
-                                    bill.significance
-                                    || bill.issueConclusion
-                                    || (bill.background && bill.background[0])
-                                    || ""
-                                }
+                                summary={bill.significance || (bill.background && bill.background[0]) || ""}
                                 details_url={`/bill/${bill.id}`}
                             />
                         ))

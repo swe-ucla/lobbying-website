@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import BillWidget from './BillWidget';
 import HomeButtons from './components/HomeButtons';
 import { useNavigate } from 'react-router-dom';
-import { bills } from './data/ConciseBillData';
+import billData from './data/billData';
 
 const ArrowRight = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
@@ -39,12 +39,12 @@ function Home() {
                 </p>
 
                 <div className="image_grid">
-                    {bills.slice(0, 6).map((bill) => (
-                        <div key={bill.id} className="bill-link-wrapper" onClick={() => navigate(bill.details_url)}>
+                    {billData.slice(0, 6).map((bill) => (
+                        <div key={bill.id} className="bill-link-wrapper" onClick={() => navigate(`/bill/${bill.id}`)}>
                             <BillWidget
-                                number={bill.number}
-                                title={bill.title}
-                                date={bill.date}
+                                number={bill.billNumber}
+                                title={bill.name}
+                                date={String(bill.year)}
                                 categories={bill.categories}
                                 status={bill.status}
                             />
