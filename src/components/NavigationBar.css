@@ -63,3 +63,45 @@
     color: #ffffff;
     border-bottom-color: #ffffff;
 }
+
+@media (max-width: 900px) {
+    .nav_bar {
+        height: auto;
+        padding: 12px 20px;
+        margin-top: 12px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px 24px;
+        height: auto;
+    }
+
+    .nav .logo {
+        margin-right: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-logo {
+        height: 56px;
+    }
+
+    .nav_link {
+        font-size: 18px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav_link {
+        font-size: 17px;
+    }
+}
