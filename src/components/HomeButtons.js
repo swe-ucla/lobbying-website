@@ -44,7 +44,11 @@ function HomeButtons() {
             <div key={home_button.id} className={`button button--${home_button.bg}`}>
                 <div className="button-shine" />
                 <div className="icon-wrap">
-                    <img src={home_button.icon} className="document-icon-img"/>
+                    <img
+                      src={home_button.icon}
+                      alt={`${home_button.title} icon`}
+                      className="document-icon-img"
+                    />
                 </div>
                 <h2 className="button-title">{home_button.title}</h2>
                 <p className="button-desc">{home_button.description}</p>

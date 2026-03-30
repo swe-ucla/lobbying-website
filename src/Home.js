@@ -1,6 +1,5 @@
 import React from "react";
 import './Home.css';
-import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
 import Footer from "./components/Footer";
 import BillWidget from './BillWidget';
