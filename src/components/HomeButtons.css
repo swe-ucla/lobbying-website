@@ -139,6 +139,39 @@
   transition: transform 0.2s ease;
 }
 
+@media (max-width: 1024px) {
+  .home-button-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-button-row-container {
+    padding: 36px 16px;
+  }
+
+  .home-button-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .button {
+    padding: 24px;
+    min-height: 0;
+  }
+
+  .button-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .button-desc {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
 .button-link:hover svg {
   transform: translateX(3px);
 }
