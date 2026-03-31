@@ -47,7 +47,7 @@
 }
 
 .nav-logo {
-    height: 70px;
+    height: clamp(44px, 6vw, 70px);
     width: auto;
     display: block;
 }
@@ -83,10 +83,6 @@
         height: auto;
         padding: 12px 20px;
         margin-top: 12px;
-    }
-
-    .nav-logo {
-        height: 56px;
     }
 
     .nav_link {

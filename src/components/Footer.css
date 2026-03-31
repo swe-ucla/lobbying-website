@@ -91,7 +91,8 @@
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .footer-bottom {
@@ -101,5 +102,19 @@
 
   .footer-quote {
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 36px 6% 24px 6%;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
   }
 }
