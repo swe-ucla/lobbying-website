@@ -148,10 +148,20 @@ textarea:focus {
 @media (max-width: 900px) {
   .contact-card {
     flex-direction: column;
+    gap: 1.5rem;
   }
   
   .map-container {
     min-height: 400px;
+  }
+
+  .contact-container {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .right-column {
+    width: 100%;
   }
 }
 
@@ -254,5 +264,50 @@ textarea:focus {
   .contact-card {
     flex: unset;
     width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-card {
+    margin: 1.5rem auto 2rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    margin-bottom: 2.5rem;
+  }
+
+  .map-container {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
   }
 }
