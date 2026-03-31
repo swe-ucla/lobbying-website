@@ -331,3 +331,23 @@
 .bill-details-arrow {
   font-size: 1rem;
 }
+
+@media (max-width: 900px) {
+  .bill-widget--expanded {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .bill-widget--expanded .bill-left {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-circles {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
