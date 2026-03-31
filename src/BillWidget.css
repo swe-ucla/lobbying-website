@@ -218,6 +218,22 @@
   -webkit-box-orient: unset;
 }
 
+@media (max-width: 720px) {
+  .bill-widget {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .bill-widget--expanded .bill-header {
+    margin-bottom: 12px;
+  }
+
+  .bill-widget--expanded .bill-categories {
+    margin-bottom: 12px;
+  }
+}
+
 .bd-sidebar .category-circle {
   width: 42px;
   height: 42px;

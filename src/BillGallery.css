@@ -179,3 +179,67 @@
     flex-direction: column;
     gap: 48px;
 }
+
+@media (max-width: 1024px) {
+  .category-legend {
+    gap: 28px;
+    margin: 36px 0;
+  }
+
+  .legend-text {
+    font-size: 16px;
+  }
+
+  .bills-container {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .bill-gallery-content {
+    margin-top: -20px;
+  }
+
+  .gallery-search-box {
+    margin: 0 auto 20px;
+  }
+
+  .gallery-search-elements {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .gallery-search-wrapper {
+    width: 100%;
+  }
+
+  .gallery-category-select {
+    width: 100%;
+  }
+
+  .category-legend {
+    justify-content: flex-start;
+    gap: 18px 24px;
+    margin: 28px 0;
+    padding: 0 20px;
+  }
+
+  .bills-container {
+    margin: 32px auto 32px;
+    padding: 0 16px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-search-elements {
+    padding: 14px;
+  }
+
+  .legend-text {
+    font-size: 15px;
+  }
+}
