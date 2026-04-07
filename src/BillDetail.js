@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import './BillDetail.css';
 import NavigationBar from './components/NavigationBar';
@@ -9,6 +9,9 @@ import billData from './data/billData';
 function BillDetail() {
     const { id } = useParams();
     const bill = billData.find(b => b.id === id);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
 
     if (!bill) {
         return (
