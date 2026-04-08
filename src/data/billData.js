@@ -1,7 +1,458 @@
 import { CATEGORIES } from "./categories";
 export { CATEGORIES };
 
-const billData = [
+const billDataRaw = [
+    // ── 2026 Featured Bills (Home page) ──
+    {
+        id: "ab887",
+        billNumber: "CA AB887",
+        name: "California Computer Science Demonstration Grant Program",
+        year: 2026,
+        categories: [CATEGORIES.EDUCATION, CATEGORIES.STEM, CATEGORIES.INCLUSIVITY],
+        legiscanLink: "https://legiscan.com/CA/bill/AB887/2025",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Asm. Marc Berman [D], Asm. Lori Wilson [D]",
+        coAuthors: "",
+        status: "Engrossed (2025-06-02); Held Under Submission in Senate (2025-08-29)",
+        background: [
+            "As an organization that exists in a space that fosters innovation and diversity in STEM workspaces, SWE@UCLA advocates for policies that expand access to STEM education. On these terms, we support Assembly Bill 887, which focuses on expanding access to computer science education in public high schools.",
+            "AB 887 would establish the California Computer Science Demonstration Grant Program, funded by education leaders, nonprofit organizations, and industry stakeholders. This grant program would provide underfunded public high schools with access to computer science courses and increase access for pupils eligible for free or reduced-cost meals.",
+            "By expanding access to computer science, AB 887 helps students develop critical and computational skills that are vital for engagement in STEM disciplines and long-term participation in the STEM workforce."
+        ],
+        issueIntro: "AB 887 aims to expand and equalize access to computer science education in California public high schools through a demonstration grant program.",
+        issues: [
+            {
+                text: "Expand access to computer science education by providing grants from nonprofit organizations and other partners to support computer science courses and STEM-related educational opportunities.",
+                subItems: [],
+            },
+            {
+                text: "Prioritize low-income and underfunded schools by ensuring that public high schools not already offering computer science courses can participate in the grant program.",
+                subItems: [],
+            },
+            {
+                text: "Advance STEM skill development so all groups gain access to fundamental computer science courses and skills, helping to close opportunity and skills gaps across the STEM workforce.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "AB 887 directly advances SWE@UCLA's mission to expand access to inclusive, high-quality STEM education. By targeting under-resourced schools and students eligible for free or reduced-cost lunch, the bill helps ensure that girls, students of color, and other historically excluded groups can gain foundational computer science skills necessary for engineering and technology careers.",
+        recommendationsIntro: "While AB 887 is a strong step forward, aligning with broader education and workforce goals, the following enhancements could amplify its impact:",
+        recommendations: [
+            {
+                text: "Guarantee stable funding for the grant program by clarifying which organizations and stakeholders will contribute funds and by identifying dedicated state funding or specific external contributions.",
+                subItems: [],
+            },
+            {
+                text: "Make access more equitable by strengthening language so that under-resourced schools are not effectively able to opt out of the grant program due to instability or uncertainty in funding.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Issabela Medina"],
+        },
+    },
+    {
+        id: "ab1980",
+        billNumber: "CA AB1980",
+        name: "Labor: Apprenticeship: California Women’s Preapprenticeship and Stipend Program",
+        year: 2026,
+        categories: [CATEGORIES.INCLUSIVITY, CATEGORIES.EDUCATION, CATEGORIES.STEM],
+        legiscanLink: "https://legiscan.com/CA/bill/AB1980/2025",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Asm. Jessica Caloza [D]",
+        coAuthors: "",
+        status: "Introduced in the Assembly (February 13, 2026)",
+        background: [
+            "As a professional organization dedicated to advancing women in engineering and technical fields, SWE@UCLA supports policies that expand access and opportunity for women in traditionally underrepresented industries. Fields such as construction and skilled trades continue to lack gender diversity, with women facing systemic barriers that limit entry and long-term success.",
+            "CA Assembly Bill 1980 introduces the California Women’s Preapprenticeship and Stipend Program, administered through the Labor and Workforce Development Agency. The program would provide funding to organizations that offer preapprenticeship training programs specifically designed for women who are interested in construction and other skilled trades.",
+            "A key component of the bill is the inclusion of stipends to offset lost wages during training. Many women, especially those who are low-income, primary caregivers, or underemployed, are unable to participate in workforce training due to financial constraints. By addressing this barrier and funding supportive services such as childcare, transportation, and career placement assistance, AB 1980 aims to improve access, completion rates, and successful transitions into registered apprenticeship programs."
+        ],
+        issueIntro: "CA AB1980 aims to expand equitable access to preapprenticeship opportunities and strengthen workforce pathways for women in construction and skilled trades.",
+        issues: [
+            {
+                text: "Increase women’s participation in apprenticeship and skilled trade programs by expanding access to high-quality preapprenticeship training tailored to women.",
+                subItems: [],
+            },
+            {
+                text: "Reduce financial barriers by providing stipends to support women during preapprenticeship training and help offset lost wages.",
+                subItems: [],
+            },
+            {
+                text: "Prioritize support for underserved populations, including low-income women, caregivers, and women from underrepresented communities.",
+                subItems: [],
+            },
+            {
+                text: "Fund supportive services such as childcare, transportation, and career guidance to improve retention, completion rates, and successful transitions into registered apprenticeship programs.",
+                subItems: [],
+            },
+            {
+                text: "Strengthen workforce pathways by connecting preapprenticeship graduates to registered apprenticeships and long-term employment opportunities in high-demand sectors.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "AB 1980 promotes economic mobility and gender equity by lowering barriers that have historically kept women out of construction and other skilled trades. By pairing preapprenticeship training with stipends and wraparound support, the bill creates a more accessible and sustainable pathway into family-supporting careers for women across California.",
+        recommendationsIntro: "While CA AB1980 is a strong step toward improving access to workforce opportunities for women, the following enhancements could further strengthen its impact:",
+        recommendations: [
+            {
+                text: "Ensure long-term funding stability by establishing sustained or renewable funding sources so that the program can continue, scale, and adapt over time.",
+                subItems: [],
+            },
+            {
+                text: "Expand outreach and awareness through partnerships with universities, community colleges, workforce boards, and community-based organizations to ensure more women learn about and can access preapprenticeship opportunities.",
+                subItems: [],
+            },
+            {
+                text: "Strengthen data transparency by making outcome data—such as participation, completion, and job placement rates—publicly accessible to track progress and improve accountability.",
+                subItems: [],
+            },
+            {
+                text: "Support career advancement beyond entry by encouraging mentorship, ongoing skill development, and leadership opportunities to promote long-term growth and retention in the trades.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Jocelyn Barrera"],
+        },
+    },
+    {
+        id: "sb1306",
+        billNumber: "CA SB1306",
+        name: "Regulatory Exemptions for Semiconductor Manufacturing Solvents",
+        year: 2026,
+        categories: [CATEGORIES.STEM, CATEGORIES.ENVIRONMENT],
+        legiscanLink: "https://legiscan.com/CA/text/SB1306/id/3371426",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Sen. Dave Cortese [D]",
+        coAuthors: "",
+        status: "Referred to Senate Public Safety Committee",
+        background: [
+            "As a professional organization committed to fostering innovation, diversity, and workforce readiness, SWE@UCLA advocates for policies that strengthen California’s engineering job market. We support SB 1306, which aligns California’s chemical regulatory codes with federal standards to keep the semiconductor manufacturing industry, and the thousands of advanced engineering jobs it provides, thriving within the state.",
+            "Semiconductor fabrication is a cornerstone of California's tech economy and a major employer of our engineering graduates. These facilities rely on specialized industrial solvents containing gamma-butyrolactone (GBL). In 2010, the federal DEA exempted chemical mixtures containing 70% or less GBL from strict controlled substance regulations, recognizing that extracting the chemical for illicit drug use from these complex industrial mixtures is not practically feasible.",
+            "Because California law was never updated to reflect the 2010 federal exemptions, semiconductor manufacturers in the state face stricter and more burdensome reporting requirements than their peers in states like Texas, Arizona, and Florida, which threatens the long-term competitiveness of California-based engineering jobs."
+        ],
+        issueIntro: "SB 1306 aligns California’s regulations on certain semiconductor manufacturing solvents with existing federal DEA exemptions for low-concentration GBL mixtures.",
+        issues: [
+            {
+                text: "Updates state chemical control laws to reflect 2010 federal DEA exemptions for industrial solvent mixtures containing 70% or less gamma-butyrolactone (GBL).",
+                subItems: [],
+            },
+            {
+                text: "Reduces unnecessary reporting and compliance burdens on semiconductor manufacturers, helping keep advanced engineering and fabrication jobs in California rather than shifting to other states.",
+                subItems: [],
+            },
+            {
+                text: "Prevents misallocation of state and company resources toward enforcing regulations that federal authorities have already determined are not necessary for public safety.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "By modernizing state-level regulations to match federal standards, SB 1306 protects California’s role as a global leader in semiconductor design and manufacturing. The bill supports the engineering workforce pipeline for students and graduates, while freeing up resources that can be redirected toward genuine public safety and innovation priorities.",
+        recommendationsIntro: "While SB 1306 is a vital step in cutting red tape to keep semiconductor engineering jobs in California, the following enhancements would better align the bill with broader workforce and innovation goals:",
+        recommendations: [
+            {
+                text: "Encourage companies that benefit from reduced compliance costs to reinvest a portion of those savings into local STEM workforce development, such as internships, co-ops, and research partnerships with California public universities.",
+                subItems: [],
+            },
+            {
+                text: "Protect university research by ensuring that exemptions clearly extend to university laboratories and academic research facilities, including institutes like the California NanoSystems Institute at UCLA.",
+                subItems: [],
+            },
+            {
+                text: "Incentivize green chemistry by pairing regulatory alignment with incentives for developing and adopting safer, more sustainable solvent alternatives that protect environmental and occupational health.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Priya Soneji", "Medha Prasad"],
+        },
+    },
+    {
+        id: "sb607",
+        billNumber: "CA SB607",
+        name: "University of California: California Institutes for Science and Innovation",
+        year: 2026,
+        categories: [CATEGORIES.STEM, CATEGORIES.EDUCATION],
+        legiscanLink: "https://legiscan.com/CA/bill/SB607/2025",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Sen. Scott Wiener [D]",
+        coAuthors: "",
+        status: "Engrossed on January 20, 2026 (Held at Desk)",
+        background: [
+            "As a professional organization that is committed to fostering innovation and keeping up with current technological advancements, SWE@UCLA advocates for policies that encourage breakthroughs in technology. We support Senate Bill 607, which strengthens the University of California’s California Institutes for Science and Innovation and explicitly promotes artificial intelligence as a concentration of research.",
+            "California’s leadership in AI and other emerging technologies depends on sustained investment in interdisciplinary research hubs that connect engineering, computer science, and applied sciences. SB 607 reinforces the role of UC campuses as engines of innovation and as critical training grounds for the next generation of engineers and technologists.",
+            "By prioritizing AI within these institutes, SB 607 aims to ensure that California remains competitive in a rapidly evolving global technology landscape while providing students with direct exposure to high-impact, real-world research."
+        ],
+        issueIntro: "SB 607 updates and strengthens California’s Institutes for Science and Innovation, with a particular focus on artificial intelligence research within the UC system.",
+        issues: [
+            {
+                text: "Expand artificial intelligence research within the UC system by explicitly including AI as a priority area for California’s Institutes for Science and Innovation.",
+                subItems: [],
+            },
+            {
+                text: "Strengthen California’s leadership in emerging technologies by enabling universities to focus on cutting-edge AI research and interdisciplinary innovation.",
+                subItems: [],
+            },
+            {
+                text: "Enhance collaboration across institutions by supporting coordinated research efforts between universities, industry, and public partners in artificial intelligence.",
+                subItems: [],
+            },
+            {
+                text: "Support workforce development in AI by fostering research environments that provide students with hands-on experience and exposure to high-demand technological fields.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "By elevating AI as a core research concentration within the California Institutes for Science and Innovation, SB 607 helps maintain California’s global edge in technology while directly benefiting students at campuses like UCLA. The bill supports a pipeline of engineers and computer scientists equipped to lead in responsible, cutting-edge AI development.",
+        recommendationsIntro: "While SB 607 is a strong step toward sustaining California’s leadership in research and innovation, the following enhancements could further strengthen its impact:",
+        recommendations: [
+            {
+                text: "Ensure equitable distribution of funding by prioritizing support for underrepresented institutions, including minority-serving institutions and community colleges, to broaden access to research opportunities.",
+                subItems: [],
+            },
+            {
+                text: "Increase support for student-facing programs by encouraging funding structures that directly involve undergraduate and graduate students in AI research initiatives, strengthening the workforce pipeline.",
+                subItems: [],
+            },
+            {
+                text: "Promote industry collaboration by leveraging public-private partnerships to connect research with industry needs, including internships, mentorship, and technology transfer opportunities.",
+                subItems: [],
+            },
+            {
+                text: "Enhance transparency and accountability through clear reporting and evaluation mechanisms to ensure funds are used effectively and to track long-term outcomes in innovation and workforce development.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Chloe Cheng", "Nyla Zia"],
+        },
+    },
+    {
+        id: "sb813",
+        billNumber: "CA SB813",
+        name: "California AI Standards and Safety Commission: Independent Verification Organizations",
+        year: 2026,
+        categories: [CATEGORIES.STEM, CATEGORIES.EDUCATION],
+        legiscanLink: "https://legiscan.com/CA/bill/SB813/2025",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Sen. Jerry McNerney [D]",
+        coAuthors: "",
+        status: "In Assembly. Read first time. Held at desk.",
+        background: [
+            "As a professional organization committed to fostering innovation, diversity, and workforce readiness, SWE@UCLA advocates for policies that expand access to STEM education and promote responsible regulation. We support CA Senate Bill 813, which establishes the California AI Standards and Safety Commission and provides for its membership.",
+            "The bill requires the Department of Technology, within the Government Operations Agency, to establish an AI Standards and Safety Commission. This commission is tasked with maintaining liaison relationships with state agencies employing artificial intelligence, providing AI technical expertise and risk assessment, and designating independent verification organizations (IVOs) that will implement risk mitigation measures.",
+            "IVOs designated by the commission would be responsible for evaluating AI risk mitigation plans and submitting regular reports on the adequacy of existing measures, helping ensure that AI systems used by the state remain safe, accountable, and aligned with the public interest."
+        ],
+        issueIntro: "CA SB813 creates a statewide governance structure to evaluate and mitigate risks associated with artificial intelligence systems used by California agencies.",
+        issues: [
+            {
+                text: "Establish the California AI Standards and Safety Commission, which will take actions related to the safety and oversight of artificial intelligence in state government.",
+                subItems: [],
+            },
+            {
+                text: "Authorize the commission to designate independent verification organizations (IVOs) to ensure that AI risk mitigation plans are evaluated on a regular basis and updated without bias.",
+                subItems: [],
+            },
+            {
+                text: "Maintain the impartiality of the commission by banning members from creating business or personal ties with companies developing AI models or with designated IVOs, and by requiring regular audits of IVOs to ensure independence from the AI industry.",
+                subItems: [],
+            },
+            {
+                text: "Require IVOs to submit reports to the Legislature addressing the capabilities of AI models, the sufficiency of existing risk mitigation measures, and recommended corrective actions for AI developers, deployers, or security vendors.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "By creating a specialized AI Standards and Safety Commission and independent verification framework, SB 813 helps California harness the benefits of AI while proactively managing its risks. This protects communities, supports trustworthy public-sector AI deployments, and sets expectations for responsible AI practices in a state that leads the nation in technology.",
+        recommendationsIntro: "While CA SB813 is a strong step toward closer regulation of artificial intelligence in state agencies and systematic evaluation of AI risk factors, the following enhancements could amplify its impact:",
+        recommendations: [
+            {
+                text: "Require the commission to submit a yearly report, rather than a biennial one, to reflect the rapid pace of AI model development and evolving risk profiles.",
+                subItems: [],
+            },
+            {
+                text: "Ensure the impartiality of security vendors utilized by IVOs by requiring verification that any vendors employed to evaluate AI models are not influenced in any manner by AI developers.",
+                subItems: [],
+            },
+            {
+                text: "Conduct yearly audits of security vendors to confirm neutrality and prevent conflicts of interest in the evaluation of AI systems.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Annan Dai"],
+        },
+    },
+    {
+        id: "sb895",
+        billNumber: "CA SB895",
+        name: "California Science and Health Research Bond Act",
+        year: 2026,
+        categories: [CATEGORIES.STEM, CATEGORIES.EDUCATION],
+        legiscanLink: "https://legiscan.com/CA/bill/SB895/2025",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Sen. Sasha Renee Perez [D], Sen. Aisha Wahab [D], Sen. Scott Wiener [D]",
+        coAuthors: "",
+        status: "Referred to Senate Committee on Health and the Senate Committee on Natural Resources and Water (N.R. & W.).",
+        background: [
+            "As a professional organization committed to fostering innovation in science and engineering pathways based at the University of California, Los Angeles, SWE@UCLA strongly advocates for policies that expand access to scientific research.",
+            "Senate Bill 895 (California Science and Health Research Bond Act) would establish the California Foundation for Science and Health Research and distribute $23 million in funding for scientific research and development, allowing institutions such as universities to further their innovations.",
+            "This bill would support critical research areas in science and health, including biomedical and climate research, helping strengthen California’s research capacity and innovation ecosystem.",
+            "The funding would play a vital role in expanding essential scientific research in California, connecting deeply with students at UCLA, including those involved with SWE@UCLA and the UCLA Society of Women Engineers (SWE) Lobbying Committee.",
+            "\"I am an undergraduate researcher at UCLA, who has had the opportunity to research essential advancements in scientific research areas such as clean energy and carbon storage, progressing efforts towards the sustainable valorization of industrial waste, and addressing rising energy demands. Many of my research projects have been affected by federal funding cuts, and establishing the California Foundation for Science and Health Research and dedicated science and health research funding would be monumental to me, the research groups I am a part of, and all scientific researchers with projects, goals, ideas, and technologies that are critical to technological advancement and improving the livelihood of communities.\""
+        ],
+        issueIntro: "SB 895 aims to expand and strengthen California’s science and health research pipeline by establishing a dedicated research foundation and providing $23 million in funding.",
+        issues: [
+            {
+                text: "Expand dedicated funding for science and health research by establishing the California Foundation for Science and Health Research within the Government Operations Agency and providing $23 million supporting research companies, universities, institutes, and organizations.",
+                subItems: [],
+            },
+            {
+                text: "Prioritize impactful projects by distributing funding based on criteria including scientific merit and benefit for the well-being of the general population and the environment, as authorized by scientific review panels.",
+                subItems: [],
+            },
+            {
+                text: "Support essential scientific innovation in California by leveraging California’s large contributions to global scientific research.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "SB 895 strengthens California’s innovation engine by investing directly in science and health research capacity. For SWE@UCLA and the UCLA student body, the bill helps protect and grow research opportunities that build the next generation of engineers and scientists, including those working in areas such as biomedical research and climate-focused innovation.",
+        recommendationsIntro: "While SB 895 is an extremely strong step to support essential scientific research, the following enhancements could amplify its impact:",
+        recommendations: [
+            {
+                text: "Support both early-stage and established research areas so funding expands the reach of scientific work and helps more ideas move from early discovery to real-world applications.",
+                subItems: [],
+            },
+            {
+                text: "Consider current organization funding by allocating support to research entities affected by federal research cuts so research capabilities remain viable and productive.",
+                subItems: [],
+            },
+            {
+                text: "Permit transparency in funding criteria and the council by ensuring clear criteria for selection of entities approved for research funding from the California Foundation for Science and Health Research.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Chloe Cheng", "Nyla Zia"],
+        },
+    },
+    {
+        id: "sb867",
+        billNumber: "CA SB867",
+        name: "Toys: Companion Chatbots",
+        year: 2026,
+        categories: [CATEGORIES.HUMAN_RIGHTS],
+        legiscanLink: "https://legiscan.com/CA/bill/SB867/2025",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Sen. Steve Padilla [D], Sen. Susan Rubio [D]",
+        coAuthors: "",
+        status: "Introduced in the Senate (2026)",
+        background: [
+            "As AI chatbots become more accessible, serious concerns have emerged about their impact on children’s mental health and development. Kids should not have unrestricted access to AI chatbots, particularly when there are documented cases of minors being driven toward self-harm after interacting with them.",
+            "Reported tragedies include minors such as Juliana Peralt (13), Sewell Garcia (14), and Adam Raine (16), who died by suicide after interacting with AI chatbots like Character.AI and ChatGPT. These models are often optimized to be affirming and highly engaging, which can result in chatbots encouraging or normalizing self-harm when users express mental health struggles.",
+            "Even when AI companies attempt to add safeguards, users can frequently bypass those protections. In response, companies such as Character.AI and OpenAI have introduced age restrictions—acknowledging that their products are not safe for minors.",
+            "Beyond self-harm risks, AI chatbots are trained on biased data, leading to racist, sexist, and other harmful outputs. There have also been documented cases of chatbots engaging in sexual conversations with minors, posing serious risks to children’s psychological and emotional well-being.",
+            "There are additional worries about the effect of always-affirming AI companions on children’s social and emotional growth. If children primarily interact with systems designed to validate them, they may struggle with real-world relationships and conflict.",
+            "Dozens of children’s toys connected to AI chatbots are already being sold, and many claim to use AI models that their own creators say are not intended for kids. For example, toys from companies like FoloToy have been found to discuss sexual topics and provide instructions on unsafe behavior, such as using a lighter. These examples highlight how AI-powered toys can be—and already are—dangerous for children."
+        ],
+        issueIntro: "SB 867 addresses the growing risk of AI-powered companion chatbots embedded in children’s toys by restricting their availability and protecting minors from harmful interactions.",
+        issues: [
+            {
+                text: "Recognize that most major AI companies ban or restrict access for children, while many AI-enabled toys still claim to use those same adult-focused models.",
+                subItems: [],
+            },
+            {
+                text: "Highlight the documented harms of AI chatbots for minors, including encouragement of self-harm, exposure to sexual or violent content, and reinforcement of biased or discriminatory language.",
+                subItems: [],
+            },
+            {
+                text: "Respond to concrete examples, such as toys that discuss sexual topics or give dangerous instructions, demonstrating that current safeguards are insufficient.",
+                subItems: [],
+            },
+            {
+                text: "Protect children by banning the sale of toys that incorporate companion chatbots, thereby reducing minors’ exposure to unsafe AI interactions.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "Supporting SB 867 is consistent with SWE@UCLA’s belief that technological development should be safe and beneficial for everyone. The bill helps ensure that AI is not deployed in ways that put children at risk, while still allowing innovation to continue in age-appropriate and well-regulated contexts.",
+        recommendationsIntro: "Supporting SB 867 will ban the sale of AI-powered companion chatbot toys and protect children in California from unsafe AI interactions.",
+        recommendations: [
+            {
+                text: "We urge a YES vote on SB 867 to prevent the sale of toys that integrate unsafe AI chatbots and to reduce the risk of psychological harm, exploitation, and inappropriate content reaching children.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Savannah Alanis"],
+        },
+    },
+    {
+        id: "ab2489",
+        billNumber: "CA AB2489",
+        name: "California Veterans’ Right to Try Act",
+        year: 2026,
+        categories: [CATEGORIES.HUMAN_RIGHTS, CATEGORIES.STEM],
+        legiscanLink: "https://legiscan.com/CA/bill/AB2489/2025",
+        statusImage: "/assets/bill_status.png",
+        leadAuthor: "Asm. Josh Lowenthal [D]",
+        coAuthors: "Asm. Jeff Gonzalez [R]",
+        status: "Referred to the Health Committee and Military & Veterans Affairs Committee.",
+        background: [
+            "Veterans in California and across the United States are experiencing a severe mental health crisis requiring urgent action. California veterans are disproportionately affected by post-traumatic stress disorder (PTSD), treatment-resistant depression, substance use disorders, and traumatic brain injuries—conditions that drive veteran suicide rates to more than double those of other California residents.",
+            "Emerging evidence suggests that psychedelic-assisted therapies may be especially effective in treating exactly these conditions, particularly when they overlap. Yet many veterans with the most severe and complex mental health conditions are excluded from clinical trials, as FDA guidelines often discourage investigational drug research in patients with multiple overlapping psychiatric diagnoses.",
+            "As a professional organization committed to fostering safe and rigorous STEM research, SWE@UCLA supports the Veterans’ Right to Try Act as a necessary step toward finding potentially life-saving treatments for this underserved population."
+        ],
+        issueIntro: "AB 2489 creates a targeted pathway for veterans with multiple severe mental health conditions to access carefully overseen psychedelic-assisted therapies when they are ineligible for existing FDA-approved trials.",
+        issues: [
+            {
+                text: "Authorize California’s Research Advisory Panel (RAP-C) to submit applications for clinical trials of Schedule I and Schedule II drugs to the United States Food and Drug Administration (FDA).",
+                subItems: [],
+            },
+            {
+                text: "Limit eligibility to veterans diagnosed with two or more severe or life-threatening mental health conditions who are ineligible for existing FDA-approved trials, focusing the bill on those most in need and currently excluded from research.",
+                subItems: [],
+            },
+            {
+                text: "Allow RAP-C to grant expedited state-level approval if the FDA fails to act in a timely manner, while still requiring independent peer review and institutional review board (IRB) approval of the research protocol.",
+                subItems: [],
+            },
+            {
+                text: "Require peer review and IRB oversight to help ensure that approved trials meet baseline standards for human-subjects protection, even as the bill opens access to high-risk populations.",
+                subItems: [],
+            },
+        ],
+        issueConclusion: "",
+        significance: "AB 2489 supports both veterans’ health and scientific innovation by enabling carefully regulated psychedelic-assisted therapy trials for veterans who have exhausted existing options. For SWE@UCLA, the bill reflects a commitment to rigorous, ethically grounded research that can save lives while advancing the frontiers of science and medicine.",
+        recommendationsIntro: "SWE@UCLA supports AB 2489 and recommends three targeted amendments to strengthen oversight and ensure studies produce meaningful results.",
+        recommendations: [
+            {
+                text: "Revise the expedited review in §11214.2(d) to balance speed with safe oversight by requiring at least three to four reviewers from at least two different disciplines, allowing applicants to appeal expedited denials to the full panel within a specified timeframe, and mandating a public written findings statement within 10 days documenting the basis for approval or denial, including any asynchronous consultation with other panel members.",
+                subItems: [],
+            },
+            {
+                text: "Define peer review standards in §11214.2(c)(1) by tightening the current \"comparable group\" language, either by setting minimum qualifying criteria for peer reviewers or by directing RAP-C to maintain a list of pre-approved peer review bodies appropriate for high-risk human subjects research.",
+                subItems: [],
+            },
+            {
+                text: "Clarify the 2028 sunset in §11214.3 to avoid legal uncertainty by explicitly stating that studies approved before January 1, 2028 may proceed to completion notwithstanding the article’s repeal, preventing mid-trial withdrawal of authorization and loss of scientific value.",
+                subItems: [],
+            },
+        ],
+        contact: {
+            email: "lobbying.swe.ucla@gmail.com",
+            names: ["Medha Prasad", "Priya Soneji"],
+        },
+    },
+
     // ── 2025 DC Trip ──
     {
         id: "hb730",
@@ -873,4 +1324,10 @@ const billData = [
     },
 ];
 
+const billData = [...billDataRaw].sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    return a.billNumber.localeCompare(b.billNumber || "");
+});
+
 export default billData;
+export { billDataRaw };

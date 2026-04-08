@@ -55,12 +55,40 @@
 
 
 .image_grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 40px;
+    justify-items: center;
+    margin: 0 auto 20px auto;
     padding: 0 60px;
+    max-width: 1320px;
+}
+
+@media (max-width: 1024px) {
+    .image_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .image_grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+.image_grid .bill-link-wrapper {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Prevent fixed-width BillWidget from overflowing grid cells on Home */
+.image_grid .bill-widget {
+    width: 100%;
+    max-width: 392px;
 }
 
 .grid_item {
