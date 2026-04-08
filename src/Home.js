@@ -38,7 +38,7 @@ function Home() {
                 </p>
 
                 <div className="image_grid">
-                    {billData.slice(0, 6).map((bill) => (
+                    {billData.slice(0, 8).map((bill) => (
                         <div key={bill.id} className="bill-link-wrapper" onClick={() => navigate(`/bill/${bill.id}`)}>
                             <BillWidget
                                 number={bill.billNumber}

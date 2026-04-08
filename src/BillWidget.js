@@ -8,17 +8,63 @@ const STATUSES = ["Draft", "Committee", "Floor Vote", "Presented", "Passed"];
 function mapStatusToStep(status) {
   if (!status) return 0;
   const s = status.toLowerCase();
-  if (STATUSES.map(st => st.toLowerCase()).includes(s)) return STATUSES.findIndex(st => st.toLowerCase() === s);
-  if (s.includes("enacted") || s.includes("signed by the president") || s.includes("became law")) return 4;
+  const normalizedStatuses = STATUSES.map((st) => st.toLowerCase());
+  if (normalizedStatuses.includes(s)) return normalizedStatuses.indexOf(s);
+
+  // 4 — Passed / enacted (federal + state patterns)
+  if (
+    s.includes("enacted") ||
+    s.includes("became law") ||
+    s.includes("signed by the president") ||
+    s.includes("signed by governor") ||
+    s.includes("approved by governor") ||
+    s.includes("chaptered") ||
+    s.includes("enrolled")
+  ) {
+    return 4;
+  }
   if (s.includes("passed") && !s.includes("referred")) return 4;
-  if (s.includes("received in the senate") || s.includes("received in the house") || s.includes("engrossed")) return 3;
-  if (s.includes("reported by") || s.includes("ordered to be reported")) return 2;
-  if (s.includes("passed") && s.includes("referred")) return 2;
-  if (s.includes("floor") || s.includes("vote")) return 2;
-  if (s.includes("presented")) return 3;
-  if (s.includes("referred") || s.includes("committee") || s.includes("subcommittee")) return 1;
-  if (s.includes("died") && s.includes("committee")) return 1;
-  if (s.includes("introduced") || s.includes("died")) return 0;
+
+  // 3 — Presented / moved to other chamber / held at desk
+  if (
+    s.includes("presented") ||
+    s.includes("engrossed") ||
+    s.includes("held at desk") ||
+    s.includes("in assembly") ||
+    s.includes("in senate") ||
+    s.includes("received in the senate") ||
+    s.includes("received in the house")
+  ) {
+    return 3;
+  }
+
+  // 2 — Floor vote / advanced out of committee
+  if (
+    s.includes("third reading") ||
+    s.includes("second reading") ||
+    s.includes("ordered to third reading") ||
+    s.includes("floor") ||
+    s.includes("vote") ||
+    s.includes("reported by") ||
+    s.includes("ordered to be reported") ||
+    (s.includes("passed") && s.includes("referred"))
+  ) {
+    return 2;
+  }
+
+  // 1 — Committee
+  if (
+    s.includes("referred") ||
+    s.includes("committee") ||
+    s.includes("subcommittee") ||
+    s.includes("held under submission") ||
+    s.includes("suspense")
+  ) {
+    return 1;
+  }
+
+  // 0 — Draft / introduced / dead
+  if (s.includes("introduced") || s.includes("read first time") || s.includes("died")) return 0;
   return 0;
 }
 
